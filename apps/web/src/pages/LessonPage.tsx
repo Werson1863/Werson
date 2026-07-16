@@ -3,10 +3,12 @@ import CodeMirror from "@uiw/react-codemirror";
 import { sql as sqlLang } from "@codemirror/lang-sql";
 import { python as pythonLang } from "@codemirror/lang-python";
 import ReactMarkdown from "react-markdown";
-import type { RunResult, Lesson } from "@codecademy-clone/shared";
+import type { GradeResult, RunResult, Lesson } from "@codecademy-clone/shared";
 import { getInstructions, getLesson } from "../content/loader";
 import { SqlRuntime } from "../runtime/sqlRuntime";
 import { OutputPanel } from "../components/OutputPanel";
+import { TestResultsPanel } from "../components/TestResultsPanel";
+import { grade } from "../grader/grade";
 
 const sqlRuntime = new SqlRuntime();
 let sqlRuntimeInit: Promise<void> | null = null;
@@ -24,6 +26,7 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
 
   const [code, setCode] = useState(lesson?.starterCode ?? "");
   const [result, setResult] = useState<RunResult | null>(null);
+  const [grading, setGrading] = useState<GradeResult | null>(null);
   const [running, setRunning] = useState(false);
   const [runtimeReady, setRuntimeReady] = useState(false);
   const mounted = useRef(true);
@@ -31,6 +34,7 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
   useEffect(() => {
     setCode(lesson?.starterCode ?? "");
     setResult(null);
+    setGrading(null);
   }, [lessonId, lesson?.starterCode]);
 
   useEffect(() => {
@@ -51,11 +55,14 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
 
   const onRun = async () => {
     setRunning(true);
+    setGrading(null);
     try {
       if (lesson.runtime === "sql") {
         await ensureSqlRuntime();
         const r = sqlRuntime.run(lesson.setup ?? "", code);
         setResult(r);
+        const g = await grade(r, lesson.tests, { code });
+        setGrading(g);
       }
     } finally {
       setRunning(false);
@@ -101,6 +108,8 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
         <div data-testid="output-panel" className="flex-1">
           <OutputPanel result={result} running={running} />
         </div>
+
+        <TestResultsPanel grading={grading} />
       </div>
     </div>
   );
