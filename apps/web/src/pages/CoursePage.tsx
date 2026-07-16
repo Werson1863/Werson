@@ -1,7 +1,6 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { getCourse } from "../content/loader";
-import { getAllProgress } from "../state/localProgress";
+import { useProgress } from "../state/ProgressContext";
 import { ProgressBar } from "../components/ProgressBar";
 
 const statusIcon: Record<string, string> = {
@@ -13,11 +12,7 @@ const statusIcon: Record<string, string> = {
 export function CoursePage() {
   const { courseId } = useParams<{ courseId: string }>();
   const course = courseId ? getCourse(courseId) : undefined;
-  const [progress, setProgress] = useState(() => getAllProgress());
-
-  useEffect(() => {
-    setProgress(getAllProgress());
-  }, [courseId]);
+  const progress = useProgress().getAllProgress();
 
   if (!course) {
     return <div className="p-6 text-red-400">Kurzus nem található: {courseId}</div>;

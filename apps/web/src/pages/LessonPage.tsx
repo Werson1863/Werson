@@ -11,7 +11,7 @@ import type { PythonRuntime } from "../runtime/pythonRuntime";
 import { OutputPanel } from "../components/OutputPanel";
 import { TestResultsPanel } from "../components/TestResultsPanel";
 import { grade } from "../grader/grade";
-import { getLessonProgress, markLessonCompleted, saveLessonCode } from "../state/localProgress";
+import { useProgress } from "../state/ProgressContext";
 
 const sqlRuntime = new SqlRuntime();
 let sqlRuntimeInit: Promise<void> | null = null;
@@ -43,24 +43,40 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
   const lesson: Lesson | undefined = useMemo(() => getLesson(lessonId), [lessonId]);
   const instructions = useMemo(() => getInstructions(lessonId) ?? "", [lessonId]);
   const course = useMemo(() => getCourseForLesson(lessonId), [lessonId]);
+  const progress = useProgress();
 
   const lessonIndex = course?.lessons.findIndex((l) => l.id === lessonId) ?? -1;
   const prevLesson = lessonIndex > 0 ? course?.lessons[lessonIndex - 1] : undefined;
   const nextLesson =
     course && lessonIndex >= 0 && lessonIndex < course.lessons.length - 1 ? course.lessons[lessonIndex + 1] : undefined;
 
-  const [code, setCode] = useState(() => getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
+  const [code, setCode] = useState(() => progress.getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
   const [result, setResult] = useState<RunResult | null>(null);
   const [grading, setGrading] = useState<GradeResult | null>(null);
   const [running, setRunning] = useState(false);
   const [runtimeReady, setRuntimeReady] = useState(false);
   const mounted = useRef(true);
+  // Tracks which lessonId we've already pulled saved code for, so a later
+  // progress-map update (e.g. the async GET /progress response arriving
+  // after mount) can still hydrate the editor once, without ever clobbering
+  // code the user is actively typing.
+  const hydratedFor = useRef<string | null>(null);
 
   useEffect(() => {
-    setCode(getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
+    hydratedFor.current = null;
+    setCode(progress.getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
     setResult(null);
     setGrading(null);
   }, [lessonId, lesson?.starterCode]);
+
+  useEffect(() => {
+    if (hydratedFor.current === lessonId) return;
+    const saved = progress.getLessonProgress(lessonId)?.lastCode;
+    if (saved !== undefined) {
+      setCode(saved);
+      hydratedFor.current = lessonId;
+    }
+  }, [lessonId, progress]);
 
   useEffect(() => {
     mounted.current = true;
@@ -100,9 +116,9 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
       setResult(r);
       setGrading(g);
       if (g.passed) {
-        markLessonCompleted(lessonId, code);
+        progress.markCompleted(lessonId, code);
       } else {
-        saveLessonCode(lessonId, code);
+        progress.saveCode(lessonId, code);
       }
     } finally {
       setRunning(false);
