@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { apiFetch } from "./lib/api";
+import { SqlTestPage } from "./runtime/SqlTestPage";
 
 function App() {
   const [apiStatus, setApiStatus] = useState<"loading" | "ok" | "error">("loading");
@@ -12,8 +13,8 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
-      <div className="text-center space-y-2">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <div className="text-center space-y-2 py-6">
         <h1 className="text-3xl font-bold">CodeLearn</h1>
         <p className="text-slate-400">
           API status:{" "}
@@ -30,6 +31,7 @@ function App() {
           </span>
         </p>
       </div>
+      <SqlTestPage />
     </div>
   );
 }
