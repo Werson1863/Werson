@@ -1,0 +1,21 @@
+{
+  "id": "python-basics/02-variables",
+  "title": "Változók",
+  "runtime": "python",
+  "starterCode": "# Hozz létre egy age nevű változót, majd írasd ki\n",
+  "solution": "age = 7\nprint(age)",
+  "tests": [
+    {
+      "type": "output_contains",
+      "description": "Kiírja a 7 értéket",
+      "expected": ["7"]
+    },
+    {
+      "type": "regex_match",
+      "description": "Az age nevű változót használja",
+      "pattern": "age\\s*=",
+      "target": "code"
+    }
+  ],
+  "hints": ["A változó létrehozása: age = 7", "Ne felejtsd el a print(age) sort."]
+}

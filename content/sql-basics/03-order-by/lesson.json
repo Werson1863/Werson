@@ -1,0 +1,30 @@
+{
+  "id": "sql-basics/03-order-by",
+  "title": "Rendezés ORDER BY-jal",
+  "runtime": "sql",
+  "setup": "CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, year INTEGER); INSERT INTO movies (id, title, year) VALUES (1, 'Inception', 2010), (2, 'The Matrix', 1999), (3, 'Interstellar', 2014), (4, 'Parasite', 2019), (5, 'Amélie', 2001);",
+  "starterCode": "-- Kérdezd le a címet és az évszámot, évszám szerint rendezve\n",
+  "solution": "SELECT title, year FROM movies ORDER BY year ASC;",
+  "tests": [
+    {
+      "type": "expected_row_count",
+      "description": "Mind az 5 filmet visszaadja",
+      "count": 5
+    },
+    {
+      "type": "column_names",
+      "description": "Csak a title és year oszlopokat adja vissza",
+      "columns": ["title", "year"]
+    },
+    {
+      "type": "regex_match",
+      "description": "A lekérdezés ORDER BY-t használ",
+      "pattern": "ORDER BY",
+      "target": "code"
+    }
+  ],
+  "hints": [
+    "Az ORDER BY után add meg az oszlopot, amely szerint rendezni szeretnél.",
+    "Csak a title és year oszlopokat listázd a SELECT után."
+  ]
+}

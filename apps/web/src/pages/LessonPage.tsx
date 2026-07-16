@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import CodeMirror from "@uiw/react-codemirror";
 import { sql as sqlLang } from "@codemirror/lang-sql";
 import { python as pythonLang } from "@codemirror/lang-python";
 import ReactMarkdown from "react-markdown";
 import type { GradeResult, RunResult, Lesson } from "@codecademy-clone/shared";
-import { getInstructions, getLesson } from "../content/loader";
+import { getCourseForLesson, getInstructions, getLesson } from "../content/loader";
 import { SqlRuntime } from "../runtime/sqlRuntime";
 import type { PythonRuntime } from "../runtime/pythonRuntime";
 import { OutputPanel } from "../components/OutputPanel";
 import { TestResultsPanel } from "../components/TestResultsPanel";
 import { grade } from "../grader/grade";
+import { getLessonProgress, markLessonCompleted, saveLessonCode } from "../state/localProgress";
 
 const sqlRuntime = new SqlRuntime();
 let sqlRuntimeInit: Promise<void> | null = null;
@@ -40,8 +42,14 @@ function ensurePythonRuntime(): Promise<void> {
 export function LessonPage({ lessonId }: { lessonId: string }) {
   const lesson: Lesson | undefined = useMemo(() => getLesson(lessonId), [lessonId]);
   const instructions = useMemo(() => getInstructions(lessonId) ?? "", [lessonId]);
+  const course = useMemo(() => getCourseForLesson(lessonId), [lessonId]);
 
-  const [code, setCode] = useState(lesson?.starterCode ?? "");
+  const lessonIndex = course?.lessons.findIndex((l) => l.id === lessonId) ?? -1;
+  const prevLesson = lessonIndex > 0 ? course?.lessons[lessonIndex - 1] : undefined;
+  const nextLesson =
+    course && lessonIndex >= 0 && lessonIndex < course.lessons.length - 1 ? course.lessons[lessonIndex + 1] : undefined;
+
+  const [code, setCode] = useState(() => getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
   const [result, setResult] = useState<RunResult | null>(null);
   const [grading, setGrading] = useState<GradeResult | null>(null);
   const [running, setRunning] = useState(false);
@@ -49,7 +57,7 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
   const mounted = useRef(true);
 
   useEffect(() => {
-    setCode(lesson?.starterCode ?? "");
+    setCode(getLessonProgress(lessonId)?.lastCode ?? lesson?.starterCode ?? "");
     setResult(null);
     setGrading(null);
   }, [lessonId, lesson?.starterCode]);
@@ -74,22 +82,27 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
     setRunning(true);
     setGrading(null);
     try {
+      let r: RunResult;
+      let g: GradeResult;
       if (lesson.runtime === "sql") {
         await ensureSqlRuntime();
-        const r = sqlRuntime.run(lesson.setup ?? "", code);
-        setResult(r);
-        const g = await grade(r, lesson.tests, { code });
-        setGrading(g);
-      } else if (lesson.runtime === "python") {
+        r = sqlRuntime.run(lesson.setup ?? "", code);
+        g = await grade(r, lesson.tests, { code });
+      } else {
         await ensurePythonRuntime();
         const runtime = pythonRuntime!;
-        const r = await runtime.run(code);
-        setResult(r);
-        const g = await grade(r, lesson.tests, {
+        r = await runtime.run(code);
+        g = await grade(r, lesson.tests, {
           code,
           callFunction: (fn, args) => runtime.callFunction(fn, args),
         });
-        setGrading(g);
+      }
+      setResult(r);
+      setGrading(g);
+      if (g.passed) {
+        markLessonCompleted(lessonId, code);
+      } else {
+        saveLessonCode(lessonId, code);
       }
     } finally {
       setRunning(false);
@@ -101,7 +114,12 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col md:flex-row">
       <div className="md:w-1/2 p-6 overflow-auto border-b md:border-b-0 md:border-r border-slate-800">
-        <h1 className="text-2xl font-bold mb-4">{lesson.title}</h1>
+        {course && (
+          <Link to={`/courses/${course.id}`} className="text-slate-400 text-sm hover:text-slate-200">
+            ← {course.title}
+          </Link>
+        )}
+        <h1 className="text-2xl font-bold mt-2 mb-4">{lesson.title}</h1>
         <div className="prose prose-invert max-w-none">
           <ReactMarkdown>{instructions}</ReactMarkdown>
         </div>
@@ -139,6 +157,35 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
         </div>
 
         <TestResultsPanel grading={grading} />
+
+        <div className="flex justify-between pt-2 border-t border-slate-800">
+          {prevLesson ? (
+            <Link
+              to={`/courses/${course!.id}/${prevLesson.path}`}
+              data-testid="prev-lesson"
+              className="text-slate-300 hover:text-white text-sm"
+            >
+              ← Előző lecke
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextLesson ? (
+            <Link
+              to={`/courses/${course!.id}/${nextLesson.path}`}
+              data-testid="next-lesson"
+              className="text-emerald-400 hover:text-emerald-300 text-sm"
+            >
+              Következő lecke →
+            </Link>
+          ) : (
+            course && (
+              <Link to={`/courses/${course.id}`} data-testid="back-to-course" className="text-emerald-400 hover:text-emerald-300 text-sm">
+                Vissza a kurzushoz →
+              </Link>
+            )
+          )}
+        </div>
       </div>
     </div>
   );

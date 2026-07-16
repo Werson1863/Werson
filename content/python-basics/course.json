@@ -4,6 +4,8 @@
   "description": "Ismerd meg a Python alapjait: kiíratás, változók és függvények — közvetlenül a böngésződben.",
   "runtime": "python",
   "lessons": [
-    { "id": "python-basics/01-print", "title": "A print() függvény", "path": "01-print" }
+    { "id": "python-basics/01-print", "title": "A print() függvény", "path": "01-print" },
+    { "id": "python-basics/02-variables", "title": "Változók", "path": "02-variables" },
+    { "id": "python-basics/03-functions", "title": "Függvények", "path": "03-functions" }
   ]
 }

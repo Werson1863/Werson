@@ -1,0 +1,24 @@
+{
+  "id": "sql-basics/02-where",
+  "title": "Szűrés WHERE-rel",
+  "runtime": "sql",
+  "setup": "CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, year INTEGER); INSERT INTO movies (id, title, year) VALUES (1, 'Inception', 2010), (2, 'The Matrix', 1999), (3, 'Interstellar', 2014), (4, 'Parasite', 2019), (5, 'Amélie', 2001);",
+  "starterCode": "-- Kérdezd le a 2010 után készült filmeket\n",
+  "solution": "SELECT * FROM movies WHERE year > 2010;",
+  "tests": [
+    {
+      "type": "expected_row_count",
+      "description": "2 filmet ad vissza",
+      "count": 2
+    },
+    {
+      "type": "output_contains",
+      "description": "A találatok között szerepel az Interstellar",
+      "expected": ["Interstellar"]
+    }
+  ],
+  "hints": [
+    "A WHERE kulcsszó után írhatsz feltételt, pl. year > 2010.",
+    "A > operátor azt jelenti: nagyobb mint."
+  ]
+}

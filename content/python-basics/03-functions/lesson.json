@@ -1,0 +1,17 @@
+{
+  "id": "python-basics/03-functions",
+  "title": "Függvények",
+  "runtime": "python",
+  "starterCode": "def square(n):\n    # Add vissza n négyzetét\n    pass\n",
+  "solution": "def square(n):\n    return n * n",
+  "tests": [
+    {
+      "type": "function_returns",
+      "description": "square(4) helyesen 16-ot ad vissza",
+      "fn": "square",
+      "args": [4],
+      "expected": 16
+    }
+  ],
+  "hints": ["A négyzet kiszámítása: n * n.", "Ne felejtsd el a return kulcsszót."]
+}

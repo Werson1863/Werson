@@ -58,3 +58,8 @@ export function getLesson(lessonId: string): Lesson | undefined {
 export function getInstructions(lessonId: string): string | undefined {
   return instructionsById.get(lessonId);
 }
+
+/** Finds the course a lesson belongs to, by matching lessonId against each course's lesson list. */
+export function getCourseForLesson(lessonId: string): Course | undefined {
+  return getAllCourses().find((course) => course.lessons.some((l) => l.id === lessonId));
+}
