@@ -1,0 +1,15 @@
+{
+  "id": "python-basics/01-print",
+  "title": "A print() függvény",
+  "runtime": "python",
+  "starterCode": "# Írd ide a kódot\n",
+  "solution": "print(\"hello\")",
+  "tests": [
+    {
+      "type": "output_contains",
+      "description": "Kiírja a 'hello' szót",
+      "expected": ["hello"]
+    }
+  ],
+  "hints": ["Használd a print() függvényt, és add át neki a kiírandó szöveget idézőjelek között."]
+}

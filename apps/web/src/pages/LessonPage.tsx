@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import type { GradeResult, RunResult, Lesson } from "@codecademy-clone/shared";
 import { getInstructions, getLesson } from "../content/loader";
 import { SqlRuntime } from "../runtime/sqlRuntime";
+import type { PythonRuntime } from "../runtime/pythonRuntime";
 import { OutputPanel } from "../components/OutputPanel";
 import { TestResultsPanel } from "../components/TestResultsPanel";
 import { grade } from "../grader/grade";
@@ -18,6 +19,22 @@ function ensureSqlRuntime(): Promise<void> {
     sqlRuntimeInit = sqlRuntime.init();
   }
   return sqlRuntimeInit;
+}
+
+// The "pyodide" module (and its ~10MB WASM runtime) is only imported the
+// first time a Python lesson actually runs, so SQL-only sessions never pay
+// for it.
+let pythonRuntime: PythonRuntime | null = null;
+let pythonRuntimeInit: Promise<void> | null = null;
+
+function ensurePythonRuntime(): Promise<void> {
+  if (!pythonRuntimeInit) {
+    pythonRuntimeInit = import("../runtime/pythonRuntime").then(async ({ PythonRuntime }) => {
+      pythonRuntime = new PythonRuntime();
+      await pythonRuntime.init();
+    });
+  }
+  return pythonRuntimeInit;
 }
 
 export function LessonPage({ lessonId }: { lessonId: string }) {
@@ -39,11 +56,11 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
 
   useEffect(() => {
     mounted.current = true;
-    if (lesson?.runtime === "sql") {
-      ensureSqlRuntime().then(() => {
-        if (mounted.current) setRuntimeReady(true);
-      });
-    }
+    setRuntimeReady(false);
+    const ensure = lesson?.runtime === "sql" ? ensureSqlRuntime : lesson?.runtime === "python" ? ensurePythonRuntime : null;
+    ensure?.().then(() => {
+      if (mounted.current) setRuntimeReady(true);
+    });
     return () => {
       mounted.current = false;
     };
@@ -62,6 +79,16 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
         const r = sqlRuntime.run(lesson.setup ?? "", code);
         setResult(r);
         const g = await grade(r, lesson.tests, { code });
+        setGrading(g);
+      } else if (lesson.runtime === "python") {
+        await ensurePythonRuntime();
+        const runtime = pythonRuntime!;
+        const r = await runtime.run(code);
+        setResult(r);
+        const g = await grade(r, lesson.tests, {
+          code,
+          callFunction: (fn, args) => runtime.callFunction(fn, args),
+        });
         setGrading(g);
       }
     } finally {
@@ -95,13 +122,15 @@ export function LessonPage({ lessonId }: { lessonId: string }) {
           <button
             data-testid="run-button"
             onClick={onRun}
-            disabled={running || (lesson.runtime === "sql" && !runtimeReady)}
+            disabled={running || !runtimeReady}
             className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white rounded font-medium"
           >
             {running ? "Futtatás..." : "Run"}
           </button>
-          {lesson.runtime === "sql" && !runtimeReady && (
-            <span className="text-slate-400 text-sm">SQL motor betöltése...</span>
+          {!runtimeReady && (
+            <span data-testid="runtime-loading" className="text-slate-400 text-sm">
+              {lesson.runtime === "python" ? "Python motor betöltése (ez eltarthat pár másodpercig)..." : "SQL motor betöltése..."}
+            </span>
           )}
         </div>
 

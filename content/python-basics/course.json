@@ -1,0 +1,9 @@
+{
+  "id": "python-basics",
+  "title": "Python alapok",
+  "description": "Ismerd meg a Python alapjait: kiíratás, változók és függvények — közvetlenül a böngésződben.",
+  "runtime": "python",
+  "lessons": [
+    { "id": "python-basics/01-print", "title": "A print() függvény", "path": "01-print" }
+  ]
+}
