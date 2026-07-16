@@ -1,5 +1,3 @@
-# Függvények
-
 Egy függvényt a `def` kulcsszóval definiálhatunk. A `return` adja vissza az eredményt a hívónak.
 
 ```python

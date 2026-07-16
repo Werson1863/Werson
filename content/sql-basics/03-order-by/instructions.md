@@ -1,5 +1,3 @@
-# Rendezés ORDER BY-jal
-
 Az `ORDER BY` kulcsszóval rendezhetjük a lekérdezés eredményét egy vagy több oszlop szerint.
 
 ```sql

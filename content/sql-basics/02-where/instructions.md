@@ -1,5 +1,3 @@
-# Szűrés WHERE-rel
-
 A `WHERE` kulcsszóval feltétel alapján szűrhetjük a sorokat.
 
 ```sql

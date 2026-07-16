@@ -1,5 +1,3 @@
-# A SELECT utasítás
-
 Az SQL-ben a `SELECT` utasítással kérdezhetünk le adatokat egy táblából.
 A `*` jelöli az összes oszlopot, a `FROM` után pedig a tábla nevét adjuk meg.
 

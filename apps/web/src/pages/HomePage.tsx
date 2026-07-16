@@ -7,6 +7,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-6">
       <h1 className="text-3xl font-bold mb-6">CodeLearn</h1>
+      {courses.length === 0 && <p className="text-slate-400">Jelenleg nincs elérhető kurzus.</p>}
       <div className="grid gap-4 md:grid-cols-2 max-w-3xl">
         {courses.map((course) => (
           <Link

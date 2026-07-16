@@ -1,5 +1,3 @@
-# Változók
-
 A Pythonban egy értéket egy névhez rendelhetünk `=` jellel — ezt hívjuk változónak.
 
 ```python

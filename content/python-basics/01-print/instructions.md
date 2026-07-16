@@ -1,5 +1,3 @@
-# A print() függvény
-
 A Pythonban a `print()` függvénnyel írhatunk ki szöveget a kimenetre.
 
 ```python
