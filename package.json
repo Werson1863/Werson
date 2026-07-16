@@ -1,0 +1,22 @@
+{
+  "name": "codecademy-clone",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/api & npm run dev --workspace=apps/web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "build": "npm run build --workspace=packages/shared && npm run build --workspace=apps/api && npm run build --workspace=apps/web",
+    "test": "npm run test --workspace=apps/web --if-present",
+    "test:e2e": "npm run test:e2e --workspace=apps/web --if-present",
+    "seed": "npm run seed --workspace=apps/api"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
