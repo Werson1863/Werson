@@ -1,0 +1,24 @@
+{
+  "id": "sql-basics/01-select",
+  "title": "A SELECT utasítás",
+  "runtime": "sql",
+  "setup": "CREATE TABLE movies (id INTEGER PRIMARY KEY, title TEXT, year INTEGER); INSERT INTO movies (id, title, year) VALUES (1, 'Inception', 2010), (2, 'The Matrix', 1999), (3, 'Interstellar', 2014), (4, 'Parasite', 2019), (5, 'Amélie', 2001);",
+  "starterCode": "-- Írd ide a lekérdezést\n",
+  "solution": "SELECT * FROM movies;",
+  "tests": [
+    {
+      "type": "expected_row_count",
+      "description": "Visszaadja mind az 5 filmet",
+      "count": 5
+    },
+    {
+      "type": "output_contains",
+      "description": "A találatok között szerepel az Inception",
+      "expected": ["Inception"]
+    }
+  ],
+  "hints": [
+    "A SELECT után * jelöli az összes oszlopot.",
+    "Ne felejtsd el a FROM movies részt, és zárd a lekérdezést pontosvesszővel."
+  ]
+}

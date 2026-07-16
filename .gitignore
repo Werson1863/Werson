@@ -10,3 +10,4 @@ apps/api/prisma/dev.db-journal
 apps/web/test-results/
 apps/web/playwright-report/
 apps/web/.vite/
+*.tsbuildinfo

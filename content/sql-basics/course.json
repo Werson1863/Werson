@@ -1,0 +1,9 @@
+{
+  "id": "sql-basics",
+  "title": "SQL alapok",
+  "description": "Ismerd meg az SQL alapjait: lekérdezések, szűrés és rendezés valódi adatbázison, böngészőben.",
+  "runtime": "sql",
+  "lessons": [
+    { "id": "sql-basics/01-select", "title": "A SELECT utasítás", "path": "01-select" }
+  ]
+}
