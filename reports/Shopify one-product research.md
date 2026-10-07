@@ -2,6 +2,8 @@
 
 **Investment memo · 7 October 2026 · Shopify One-Product Research Engine v1.0**
 
+> **Correction (7 Oct 2026, later the same day):** the follow-up validation ([crochet-opportunity-validation.md](crochet-opportunity-validation.md)) found that this memo's claim of "no German premium competitor" is **wrong**. Die Bobbels, Willy Wolle, Figured'Art DE and The Woobles on Amazon.de already sell this concept. German market prices are about €20–31, not €35, and the planned differentiators are already standard. The validated recommendation is a **€800–1,000 test only**, not the €5,200–7,500 plan below.
+
 **Verdict: CONDITIONAL GO.** With my own money I would test this product, but only as a capped test of about €5,000 in Germany and Austria. That covers the first inventory, setup and €1,500 of ads, with written kill rules. I would not commit €10–20k up front. The realistic case loses money in November, is about break-even in December and makes a small profit (~€600) in January. €2,000/month within 90 days happens only in the upside case.
 
 ---
