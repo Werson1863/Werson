@@ -127,3 +127,12 @@ Conclusion: the proven Hungarian money is in **pet portraits and photo wall art*
   AliExpress sells generic 1x1 plates cheaply. Custom per-photo from China = 2–3 weeks + €3 EU duty since 1 Jul 2026.
 - Temu can't easily kill a local made-to-order Christmas business, but a Chinese seller on Temu/AliExpress at ~€25–30 would
   anchor price below 19,990 Ft for anyone who compares. Moat: speed, Hungarian guide, preview, QC, replacement — real but thin.
+
+## 13. Second pass (same day) — new evidence, all against
+- Direct access re-checked: still blocked (Trends, TikTok, Ad Library, Reddit, Temu, AliExpress, Árukereső, eMAG, lego.com).
+- Printed "LEGO-style" photo art in HU: ourmoments.hu 5,990 Ft (promo), egyediportrek.hu from 8,990 Ft, emlekposzter.hu (instant preview).
+- Quality: photo-mosaic Trustpilot reviews ("face completely unrecognisable", "couldn't see my baby's face"); Brickset 40179 reviewer:
+  48×48 "too pixelated"; complaints about misleading sample images dismissed by some sellers. 32×32 = 44% of 48×48 resolution.
+- Couples' activity searches → painting/porcelain kits, not brick mosaics (Árgép). Wedding/Christmas/pet-memorial searches → no brick-mosaic signal.
+- Christmas cut-offs (2025 example): Pick Pack Pont 12 Dec, GLS 18 Dec.
+- Verdict changed: CONDITIONAL GO (€150) → NO-GO (score 48 → 43).

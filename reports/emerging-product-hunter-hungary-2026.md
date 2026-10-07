@@ -2,7 +2,7 @@
 
 **Emerging Product Hunter · Hungary 2026 · 7 October 2026**
 
-> **Superseded by the red-team validation ([redteam-brick-mosaic-hungary.md](redteam-brick-mosaic-hungary.md)).** That review found LEGO's Mosaic Maker is sold in Hungary at 44,990 Ft, Pixelhobby already offers own-photo kits, and no Hungarian purchase intent could be found. With labour and realistic conversion included, the 90-day profit falls to about €0. The recommendation is now a **€150 smoke test only**, not €1,000.
+> **Superseded by the red-team validation ([redteam-brick-mosaic-hungary.md](redteam-brick-mosaic-hungary.md)).** That review found LEGO's Mosaic Maker is sold in Hungary at 44,990 Ft, Pixelhobby already offers own-photo kits, and no Hungarian purchase intent could be found. With labour and realistic conversion included, the 90-day profit falls to about €0. After a second red-team pass the verdict is **🔴 NO-GO**.
 
 **Evidence limit.** Google Trends, TikTok, Reddit, the Meta Ad Library, Amazon, Etsy, Árukereső, eMAG, AliExpress and Temu were all blocked from this research environment. Everything below comes from search-engine extracts. **No Hungarian demand data (search volume, ad activity, social traction) could be verified.** The 30-day test below is designed to measure exactly that. Full source list and candidate database: `research_notes/Emerging product hunter Hungary 2026/`.
 

@@ -16,23 +16,35 @@ Null hypothesis tested: *"Hungarians don't care enough about photo-to-brick mosa
 
 Evidence and model: `research_notes/Emerging product hunter Hungary 2026/redteam_evidence.md`, `redteam_model.py`, `redteam_model_output.md`.
 
+### Second red-team pass (same day): verdict downgraded to 🔴 NO-GO
+
+Direct access was re-checked and was still blocked: Google Trends, TikTok, the Meta Ad Library, Reddit, Temu, AliExpress, Árukereső, eMAG and lego.com. The searches the first pass hadn't covered found:
+
+1. **The "LEGO look" is already cheap in Hungary.** Printed LEGO-style photo art costs **5,990 Ft** (ourmoments.hu, promo price) and **from 8,990 Ft** (egyediportrek.hu); emlekposzter.hu offers an instant preview. Anyone who wants the look but not the work pays a third of our price ([ourmoments](https://ourmoments.hu/products/lego-stilusu-kep), [egyediportrek](https://egyediportrek.hu/termek/egyedi-portre-lego-stilus/), [emlekposzter](https://emlekposzter.hu/products/lego-stilusu-falikep-sajat-fotobol-azonnali-elonezettel)).
+2. **The core quality complaint is resolution, and our cheap size makes it worse.** International reviews say "the face was completely unrecognisable" and "I couldn't even see my baby's face". Some buyers even call LEGO's 48×48 "too pixelated", and some sellers dismissed complaints about misleading sample images. A 19,990 Ft **32×32 has 44% of the pixels of a 48×48**. ([Trustpilot photo-mosaic](https://ch.trustpilot.com/review/photo-mosaic.co.uk), [Brickset 40179 reviews](https://brickset.com/reviews/set-40179-1), [Brick.me photo tips](https://brick.me/blogs/inspiration/6-tips-to-find-the-best-pics-to-brick))
+3. **Still zero Hungarian purchase intent.** Hungarian-language queries for wedding, Christmas, couples' activity, pet memorial and LEGO portrait returned only LEGO's official page, printed LEGO-style art, news items (Prohardver "LEGO Photo"; a LEGO portrait in Szon.hu) and generic gift lists.
+4. **The couples' angle has no Hungarian evidence.** "Couples' activity" searches return painting and porcelain-painting kits, not brick mosaics.
+5. **The Christmas window is short.** A Hungarian webshop's 2025 cutoffs were 12 December for parcel points and 18 December for GLS. Add 4–6 hours of building after delivery, and many buyers never reach the gift in time.
+
+**Updated decision:** I would **not** spend my own €150 either. Every remaining argument for the product is supply-side (cheap bricks, room under LEGO's price). Every demand-side signal points to cheaper or easier substitutes. If you still want to test it, the €150 smoke test below is the only acceptable spend, with the same kill rules.
+
 ---
 
 ## 1. Verdict
 
-**🟡 CONDITIONAL GO, micro-test only (€150).** I would not commit €1,000 upfront. Red-team score: **48/100**.
+**🔴 NO-GO** (second pass). The first pass said 🟡 CONDITIONAL GO, micro-test only (€150). Red-team score: **43/100** (first pass 48).
 
 | Factor | Score | Basis |
 |---|---:|---|
-| Demand evidence (25) | **8** | Gift problem real; zero product-specific Hungarian intent found |
+| Demand evidence (25) | **7** | Gift problem real; zero product-specific Hungarian intent; the desire is partly served by 5,990–8,990 Ft printed LEGO-style art |
 | Hungary market fit (15) | 8 | Strong photo-gift and pet-portrait culture, but forum answers lean "useful, not dust-collectors" |
-| Price / willingness to pay (15) | 6 | People pay 9–65k Ft for pet portraits; this format is unproven |
-| Competitive advantage (10) | 5 | Cheaper than LEGO, local and Hungarian; easy to copy |
+| Price / willingness to pay (15) | 4 | People pay 9–65k Ft for pet portraits, but the LEGO look costs 6–9k printed; this format is unproven |
+| Competitive advantage (10) | 4 | Cheaper than LEGO, local and Hungarian; easy to copy; printed alternatives undercut it |
 | Unit economics (10) | 7 | 85–93% gross margin; 35 minutes of labour per order |
 | Acquisition potential (10) | 6 | Very visual product; no Hungarian ad or social data |
 | Operational feasibility (5) | 3 | Manual counting and QC per order |
 | Trust / payment friction (5) | 2 | New store, 20–30k Ft custom product, half of buyers prefer cash on delivery |
-| Risk (5) | 3 | Build time 4–13 h; replacing missing pieces is a legal obligation |
+| Risk (5) | 2 | Pixelated or unrecognisable results (worse at 32×32); build time 4–13 h; replacing missing pieces is a legal obligation |
 
 ## 2. Strongest evidence for
 
@@ -169,7 +181,7 @@ Each threshold follows from the break-even CAC of about €46 (VAT-exempt, inclu
 
 **WOULD YOU INVEST €1,000? NO.**
 
-I would spend **€150** to test whether Hungarian dog owners will pre-pay 19,990 Ft. The other €850 would be released only if that smoke test passes, and the first €400 of it only if phase 2 holds CAC ≤ €30. Committing €1,000 now would be paying to find out something €150 can find out.
+First pass: I would spend **€150** to test whether Hungarian dog owners will pre-pay 19,990 Ft, releasing the other €850 only if the tests pass. Second pass: **not even the €150.** Every demand-side signal found points to cheaper substitutes (printed LEGO-style art at 5,990–8,990 Ft, canvas at 9,300–15,900 Ft) or to the official LEGO kit. The format's core quality risk (pixelated, unrecognisable faces) is worst at the cheap 32×32 size the price needs.
 
 **WOULD YOU INVEST €5,000? NO.**
 - There is no verified demand.
@@ -179,4 +191,4 @@ I would spend **€150** to test whether Hungarian dog owners will pre-pay 19,99
 
 €5,000 would only make sense after ~3 months of real data showing CAC ≤ €25 and repeat gift occasions.
 
-**FINAL: 🟡 CONDITIONAL GO, a €150 micro-test only.** If the smoke test fails any kill rule, the verdict becomes 🔴 NO-GO and this product should be dropped.
+**FINAL (second pass): 🔴 NO-GO.** The first pass said 🟡 CONDITIONAL GO with a €150 micro-test. I would no longer spend even the €150 myself. The cheaper LEGO-style printed art (5,990–8,990 Ft) and the pixelation complaints remove the last demand-side argument. The €150 smoke test above stays as the only acceptable spend if you still want to test the dog-portrait angle; if any kill rule triggers, drop the product.
