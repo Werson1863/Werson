@@ -56,8 +56,8 @@ export default function PrivacyPage() {
           <div>
             <h2>Adatfeldolgozók</h2>
             <p>
-              Az űrlap üzeneteit a Resend (Resend, Inc.) e-mail szolgáltatáson keresztül továbbítjuk, a weboldalt a
-              Vercel Inc. infrastruktúrája szolgálja ki.
+              Az űrlap üzeneteit a Resend (Resend, Inc.) e-mail szolgáltatáson keresztül továbbítjuk, a weboldalt a(z)
+              [tárhelyszolgáltató] infrastruktúrája szolgálja ki.
             </p>
           </div>
           <div>

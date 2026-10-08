@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 /**
  * Két build-mód:
- *  - alap (`npm run build`): Vercel / Node. Minden oldal statikusan előrenderelt (SSG),
+ *  - alap (`npm run build` + `npm start`): bármilyen Node.js szerver. Minden oldal statikusan előrenderelt (SSG),
  *    egyedül a kapcsolati űrlap `/api/contact` végpontja fut szerveroldalon.
  *  - statikus export (`npm run build:static`): tisztán statikus `out/` mappa bármilyen
  *    tárhelyre. Ilyenkor az API route kimarad (a `*.api.ts` kiterjesztés nem számít

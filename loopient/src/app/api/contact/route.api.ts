@@ -1,4 +1,4 @@
-// Kapcsolati űrlap végpont (csak a Vercel/Node buildben; statikus exportnál kimarad – lásd next.config.ts).
+// Kapcsolati űrlap végpont (csak a normál, Node-os buildben; statikus exportnál kimarad – lásd next.config.ts).
 import { site } from "@/config/site";
 import { looksLikeSpam, normalize, validate, type ContactInput } from "@/lib/contact";
 

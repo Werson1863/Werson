@@ -65,25 +65,27 @@ Környezeti változók (`.env.example`):
 | `CONTACT_FROM_EMAIL` | Feladó Resendben hitelesített domainről, pl. `Loopient weboldal <urlap@loopient.hu>` |
 | `NEXT_PUBLIC_SITE_URL` | Kanonikus cím (sitemap, OG, canonical), pl. `https://loopient.hu` |
 
-## Deploy Vercelre
+## Élesítés saját szerveren (Node.js)
+
+Bármilyen Node.js 20.9+ futtatására képes szerveren vagy VPS-en működik.
 
 1. **Resend**: regisztrálj a [resend.com](https://resend.com)-on, *Domains* → add hozzá a domaint, állítsd be
    a megadott DNS rekordokat (SPF/DKIM), majd *API Keys* → hozz létre egy *Sending access* kulcsot.
-2. Töltsd fel a repót GitHubra (ez a mappa: `loopient/`).
-3. [vercel.com/new](https://vercel.com/new) → *Import* a repót.
-4. **Root Directory**: `loopient` (a repó gyökerében más projekt is van). A Framework Preset automatikusan
-   *Next.js*; a build parancsot és a kimenetet hagyd alapértelmezésen.
-5. *Environment Variables*: add meg a `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` és
-   `NEXT_PUBLIC_SITE_URL` értékét (Production, és ha kell, Preview környezetre is).
-6. *Deploy*. Utána *Settings → Domains*: add hozzá a `loopient.hu`-t (és `www`-t átirányításként), majd
-   állítsd be a DNS-t a Vercel utasításai szerint.
-7. Küldj egy tesztüzenetet az éles `/kapcsolat` oldalról, és nézd meg a Vercel *Logs* fület, ha nem érkezik meg.
-
-CLI-vel: `npm i -g vercel`, majd a `loopient/` mappában `vercel` (preview) és `vercel --prod`.
+2. A szerveren:
+   ```bash
+   cd loopient
+   npm ci
+   cp .env.example .env.production.local   # töltsd ki: RESEND_API_KEY, CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL, NEXT_PUBLIC_SITE_URL
+   npm run build
+   PORT=3000 npm start
+   ```
+3. Tartsd futva egy folyamatkezelővel (pl. `pm2 start npm --name loopient -- start` vagy systemd szolgáltatás),
+   és tegyél elé egy reverse proxyt HTTPS-sel (pl. nginx vagy Caddy), amely a `localhost:3000`-re továbbít.
+4. Küldj egy tesztüzenetet az éles `/kapcsolat` oldalról; hiba esetén a szerver naplójában `[contact]` előtaggal látod az okát.
 
 ## Statikus export (opcionális)
 
-Ha nem Vercelre, hanem tisztán statikus tárhelyre mész:
+Ha tisztán statikus tárhelyre mész (Node.js nélkül):
 
 ```bash
 NEXT_PUBLIC_CONTACT_ENDPOINT=https://valami.hu/api/contact npm run build:static   # → out/
@@ -91,7 +93,7 @@ NEXT_PUBLIC_CONTACT_ENDPOINT=https://valami.hu/api/contact npm run build:static 
 
 Ilyenkor az API route kimarad (a `*.api.ts` kiterjesztést csak a normál build kezeli route-ként), és az
 űrlap a `NEXT_PUBLIC_CONTACT_ENDPOINT` címre küld. Ez egy külön hosztolt végpont legyen, amely
-ugyanazt a JSON-t fogadja (pl. ugyanez a projekt Vercelen).
+ugyanazt a JSON-t fogadja (pl. ugyanez a projekt egy Node.js szerveren).
 
 ## Minőség – mért eredmények
 

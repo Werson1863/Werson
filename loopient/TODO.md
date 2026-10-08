@@ -65,6 +65,7 @@ Minden alábbi tétel **kitalált vagy ideiglenes**. Élesítés előtt cseréld
 
 ## 5. Élesítés
 
-- [ ] Resend: domain hitelesítése, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` beállítása Vercelen
+- [ ] Tárhely kiválasztása, és a `[tárhelyszolgáltató]` kitöltése az adatkezelési tájékoztatóban (`src/app/adatvedelem/page.tsx`)
+- [ ] Resend: domain hitelesítése, `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` beállítása a szerveren
 - [ ] Egy valódi tesztüzenet küldése az éles űrlapról
 - [ ] Google Search Console: domain igazolás, `sitemap.xml` beküldése
