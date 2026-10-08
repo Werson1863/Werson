@@ -1,0 +1,393 @@
+@import "tailwindcss";
+
+/* Hover csak valódi egeres eszközön (érintőn nem ragad be). */
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+/* Sötét szekción belüli színváltozatok: on-dark:text-... */
+@custom-variant on-dark (&:where(.on-dark, .on-dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-orange: #f97316;
+  --color-orange-ink: #c2410c;
+  --color-orange-light: #fdba74;
+  --color-orange-wash: #fff4ea;
+  --color-graphite: #0f1115;
+  --color-ink-2: #1f2330;
+  --color-mist: #f5f5f7;
+  --color-page: #f9f9f8;
+  /* szürke szövegek – mindkettő AA kontrasztú a saját hátterén */
+  --color-muted: #545866; /* világos háttéren: 7.0:1 */
+  --color-muted-dark: #a3a8b8; /* grafit háttéren: 8.3:1 */
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --shadow-card: 0 0 0 1px rgb(15 17 21 / 0.06), 0 1px 2px rgb(15 17 21 / 0.04), 0 8px 24px -12px rgb(15 17 21 / 0.12);
+  --shadow-raised: 0 0 0 1px rgb(15 17 21 / 0.06), 0 2px 4px rgb(15 17 21 / 0.04), 0 24px 48px -20px rgb(15 17 21 / 0.22);
+  --shadow-dark: 0 0 0 1px rgb(255 255 255 / 0.08), 0 16px 40px -16px rgb(0 0 0 / 0.6);
+
+  --animate-enter: enter 600ms var(--ease-out) both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    background: var(--color-page);
+    color: var(--color-graphite);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  summary {
+    touch-action: manipulation;
+  }
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* iOS ne zoomoljon */
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-orange-ink);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-orange :focus-visible {
+    outline-color: var(--color-graphite);
+  }
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--color-orange-light);
+  }
+  ::selection {
+    background: var(--color-orange-light);
+    color: var(--color-graphite);
+  }
+}
+
+@layer components {
+  /* ---------- Gombok ---------- */
+  .btn {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.625rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    user-select: none;
+    transition: transform 160ms var(--ease-out);
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 200ms var(--ease-out);
+  }
+  .btn:active {
+    transform: scale(0.97);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover::before {
+      opacity: 1;
+    }
+  }
+  .btn-primary {
+    background: var(--color-graphite);
+    color: #fff;
+    box-shadow: 0 1px 2px rgb(15 17 21 / 0.2), inset 0 1px 0 rgb(255 255 255 / 0.12);
+  }
+  .btn-primary::before {
+    background: var(--color-ink-2);
+  }
+  .btn-accent {
+    background: var(--color-orange);
+    color: var(--color-graphite);
+    box-shadow: 0 1px 2px rgb(194 65 12 / 0.25), inset 0 1px 0 rgb(255 255 255 / 0.25);
+  }
+  .btn-accent::before {
+    background: #fb8a3c;
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--color-graphite);
+    box-shadow: var(--shadow-card);
+  }
+  .btn-secondary::before {
+    background: var(--color-mist);
+  }
+  .btn-ghost-dark {
+    background: rgb(255 255 255 / 0.08);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
+  }
+  .btn-ghost-dark::before {
+    background: rgb(255 255 255 / 0.08);
+  }
+  .btn .arrow {
+    transition: transform 200ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .btn:hover .arrow {
+      transform: translateX(3px);
+    }
+  }
+
+  /* ---------- Szöveges link aláhúzással (transform-mal animálva) ---------- */
+  .link {
+    position: relative;
+    color: var(--color-orange-ink);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .link:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-muted);
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 8px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms var(--ease-out);
+  }
+  .nav-link[aria-current="page"] {
+    color: var(--color-graphite);
+  }
+  .nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .nav-link:hover {
+      color: var(--color-graphite);
+    }
+    .nav-link:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  /* ---------- Kártyák ---------- */
+  .card {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+  .card-lift {
+    transition: transform 220ms var(--ease-out);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .card-lift:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--color-orange-ink);
+  }
+  .on-dark .eyebrow {
+    color: var(--color-orange-light);
+  }
+
+  /* ---------- Üveg menü ---------- */
+  .glass {
+    background: rgb(249 249 248 / 0.72);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass {
+      background: rgb(249 249 248 / 0.96);
+    }
+  }
+
+  /* ---------- Hosszú szövegek mobilon ---------- */
+  .wrap-anywhere {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sr-only-focusable:not(:focus):not(:focus-within) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* ---------- Belépő animációk ---------- */
+/* Hero: CSS-only, lépcsőzve (--i index). JS nélkül is lefut. */
+.enter {
+  animation: var(--animate-enter);
+  animation-delay: calc(var(--i, 0) * 80ms + 60ms);
+}
+
+/* Görgetéses reveal: csak ha fut JS (html.js), különben azonnal látható. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 600ms var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Szűrő-kártyák megjelenése chip váltáskor */
+.pop-in {
+  animation: pop-in 240ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 30ms);
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translate3d(0, 6px, 0);
+  }
+}
+
+/* GYIK panel nyitás */
+.faq-panel {
+  animation: faq-in 220ms var(--ease-out) both;
+}
+@keyframes faq-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+/* Mobil menü */
+.menu-panel {
+  animation: menu-in 220ms var(--ease-out) both;
+  transform-origin: top center;
+}
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -8px, 0) scale(0.98);
+  }
+}
+
+/* "Élő" pötty pulzálás a mock UI-ban */
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: currentColor;
+  animation: pulse 2s var(--ease-out) infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+  .pulse-dot::after {
+    display: none;
+  }
+}

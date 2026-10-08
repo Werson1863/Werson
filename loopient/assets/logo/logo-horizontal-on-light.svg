@@ -1,0 +1,7 @@
+<!-- HELYKITÖLTŐ: cseréld a valódi vízszintes Loopient logóra (azonos fájlnévvel). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 40" width="172" height="40" role="img" aria-label="Loopient">
+  <rect width="40" height="40" rx="10" fill="#F97316"/>
+  <path d="M27.5 14.2A9 9 0 1 0 29 20" fill="none" stroke="#0F1115" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M24.2 13.4l4.4.4-.6 4.4" fill="none" stroke="#0F1115" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="52" y="28.5" fill="#0F1115" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="-0.75">Loopient</text>
+</svg>
