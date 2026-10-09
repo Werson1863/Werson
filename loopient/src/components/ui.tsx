@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon } from "@/components/Icon";
+import { Backdrop } from "@/components/Backdrop";
 
 export function Container({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-6xl px-4 sm:px-6 ${className}`}>{children}</div>;
@@ -55,7 +56,8 @@ export function ArrowLink({
 /** Aloldali hero – CSS belépő animációval. */
 export function PageHero({ eyebrow, title, lead, children }: { eyebrow: string; title: ReactNode; lead: ReactNode; children?: ReactNode }) {
   return (
-    <section className="pb-12 pt-16 sm:pb-16 sm:pt-24">
+    <section className="relative isolate overflow-hidden pb-12 pt-16 sm:pb-16 sm:pt-24">
+      <Backdrop variant="page" />
       <Container className="text-center">
         <p className="eyebrow enter" style={{ ["--i" as string]: 0 }}>
           {eyebrow}

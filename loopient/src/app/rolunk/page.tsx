@@ -6,6 +6,7 @@ import { ClosingCta } from "@/components/ClosingCta";
 import { Icon } from "@/components/Icon";
 import { Photo } from "@/components/Photo";
 import { Container, PageHero, SectionHeader } from "@/components/ui";
+import { Backdrop } from "@/components/Backdrop";
 
 export const metadata: Metadata = pageMetadata({
   title: "Rólunk – ki áll a Loopient mögött",
@@ -30,7 +31,8 @@ export default function AboutPage() {
         lead="A Loopient azért jött létre, hogy a magyar kis- és középvállalkozások ne a táblázatok és e-mailek közötti másolgatással töltsék a hetüket."
       />
 
-      <section className="pb-20 sm:pb-28" aria-labelledby="alapito-cim">
+      <section className="relative isolate overflow-hidden pb-20 sm:pb-28" aria-labelledby="alapito-cim">
+        <Backdrop variant="soft" />
         <Container>
           <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             <div className="mx-auto grid w-full min-w-0 max-w-xl grid-cols-[1.15fr_0.85fr] gap-3 sm:gap-4 lg:max-w-none" data-reveal>
@@ -80,7 +82,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="on-dark bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+      <section className="on-dark relative isolate overflow-hidden bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+        <Backdrop variant="dark" />
         <Container>
           <SectionHeader id="elvek-cim" eyebrow="Alapelveink" title="Így dolgozunk – minden projektben." />
           <ul className="mt-14 grid gap-4 sm:grid-cols-2">
@@ -97,7 +100,8 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28" aria-labelledby="kinek-cim">
+      <section className="relative isolate overflow-hidden py-20 sm:py-28" aria-labelledby="kinek-cim">
+        <Backdrop variant="glow" />
         <Container>
           <SectionHeader
             id="kinek-cim"

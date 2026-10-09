@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/ContactForm";
 import { Icon, type IconName } from "@/components/Icon";
 import { Container, PageHero } from "@/components/ui";
+import { Backdrop } from "@/components/Backdrop";
 
 export const metadata: Metadata = pageMetadata({
   title: "Kapcsolat – kérj ingyenes konzultációt",
@@ -52,7 +53,8 @@ export default function ContactPage() {
         title="Beszéljünk a folyamataidról."
         lead="Írd meg röviden, melyik feladat visz el túl sok időt. Az első, 30 perces konzultáció ingyenes és kötelezettségmentes."
       />
-      <section className="pb-20 sm:pb-28" aria-label="Kapcsolatfelvétel">
+      <section className="relative isolate overflow-hidden pb-20 sm:pb-28" aria-label="Kapcsolatfelvétel">
+        <Backdrop variant="soft" />
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1fr_22rem] lg:gap-12">
             <div className="min-w-0 enter" style={{ ["--i" as string]: 3 }}>

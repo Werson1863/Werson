@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/config/site";
 import { Photo } from "@/components/Photo";
 import { ArrowLink, Container } from "@/components/ui";
+import { Backdrop } from "@/components/Backdrop";
 
 /** Narancs záró CTA a fekete-fehér portréval – minden oldal alján, a footer felett. */
 export function ClosingCta({
@@ -14,7 +15,8 @@ export function ClosingCta({
   return (
     <section className="pb-20 sm:pb-28" aria-labelledby="zaro-cta-cim">
       <Container>
-        <div className="on-orange relative overflow-hidden rounded-[2rem] bg-orange text-graphite shadow-[0_24px_60px_-24px_rgb(194_65_12/0.55)]" data-reveal>
+        <div className="on-orange relative isolate overflow-hidden rounded-[2rem] bg-orange text-graphite shadow-[0_24px_60px_-24px_rgb(194_65_12/0.55)]" data-reveal>
+          <Backdrop variant="cta" />
           <div className="grid items-end md:grid-cols-[1.25fr_0.75fr]">
             <div className="min-w-0 p-8 sm:p-12 lg:p-16">
               <p className="text-sm font-semibold">Ingyenes konzultáció</p>
@@ -24,7 +26,7 @@ export function ClosingCta({
               <p className="mt-5 max-w-lg text-[1.0625rem] leading-relaxed text-graphite/85">{lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ArrowLink href="/kapcsolat">Kérj ajánlatot</ArrowLink>
-                <Link href="/megoldasok" className="btn bg-white/40 text-graphite shadow-[inset_0_0_0_1px_rgb(15_17_21/0.12)] before:bg-white/40">
+                <Link href="/megoldasok" className="btn btn-glass-light">
                   Megoldások
                 </Link>
               </div>

@@ -2,12 +2,14 @@ import Link from "next/link";
 import { hasRealValue, nav, site } from "@/config/site";
 import { Icon } from "@/components/Icon";
 import { Logo } from "@/components/Logo";
+import { Backdrop } from "@/components/Backdrop";
 
 export function Footer() {
   const { email, phone, phoneHref, address } = site.contact;
   const year = new Date().getFullYear();
   return (
-    <footer className="on-dark bg-graphite text-white">
+    <footer className="on-dark relative isolate overflow-hidden bg-graphite text-white">
+      <Backdrop variant="footer" />
       <div className="mx-auto max-w-6xl px-4 pb-10 pt-16 sm:px-6">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="max-w-sm">

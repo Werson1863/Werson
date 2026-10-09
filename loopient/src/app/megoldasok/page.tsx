@@ -4,6 +4,7 @@ import { ClosingCta } from "@/components/ClosingCta";
 import { Icon, type IconName } from "@/components/Icon";
 import { IntegrationsSection, ProcessSection } from "@/components/home/Sections";
 import { ArrowLink, Container, PageHero, SectionHeader } from "@/components/ui";
+import { Backdrop } from "@/components/Backdrop";
 
 export const metadata: Metadata = pageMetadata({
   title: "Megoldások – riport, számla, dokumentum és integráció automatizálás",
@@ -109,7 +110,8 @@ export default function SolutionsPage() {
         </nav>
       </PageHero>
 
-      <section className="pb-20 sm:pb-28" aria-label="Megoldási területek">
+      <section className="relative isolate overflow-hidden pb-20 sm:pb-28" aria-label="Megoldási területek">
+        <Backdrop variant="soft" />
         <Container>
           <ul className="grid gap-4 md:grid-cols-2">
             {areas.map((a, i) => (
@@ -142,7 +144,8 @@ export default function SolutionsPage() {
 
       <ProcessSection />
 
-      <section className="py-20 sm:py-28" aria-labelledby="arak-cim">
+      <section className="relative isolate overflow-hidden py-20 sm:py-28" aria-labelledby="arak-cim">
+        <Backdrop variant="glow" />
         <Container>
           <SectionHeader
             id="arak-cim"

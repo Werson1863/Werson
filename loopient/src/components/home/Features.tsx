@@ -4,6 +4,7 @@ import { DocumentsMock } from "@/components/mock/DocumentsMock";
 import { ReportsMock } from "@/components/mock/ReportsMock";
 import { SyncMock } from "@/components/mock/SyncMock";
 import { Container, SectionHeader } from "@/components/ui";
+import { Backdrop } from "@/components/Backdrop";
 
 const rows: { eyebrow: string; title: string; body: string; points: string[]; mock: ReactNode }[] = [
   {
@@ -31,7 +32,8 @@ const rows: { eyebrow: string; title: string; body: string; points: string[]; mo
 
 export function Features() {
   return (
-    <section className="py-20 sm:py-28" aria-labelledby="funkciok-cim">
+    <section className="relative isolate overflow-hidden py-20 sm:py-28" aria-labelledby="funkciok-cim">
+      <Backdrop variant="soft" />
       <Container>
         <SectionHeader
           id="funkciok-cim"

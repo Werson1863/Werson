@@ -5,10 +5,12 @@ import { Icon } from "@/components/Icon";
 import { Photo } from "@/components/Photo";
 import { ArrowLink, Container, SectionHeader } from "@/components/ui";
 import { ReplaceFilter } from "./ReplaceFilter";
+import { Backdrop } from "@/components/Backdrop";
 
 export function ReplaceSection() {
   return (
-    <section className="bg-white py-20 sm:py-28" aria-labelledby="kivaltjuk-cim">
+    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28" aria-labelledby="kivaltjuk-cim">
+      <Backdrop variant="dots" />
       <Container>
         <SectionHeader
           id="kivaltjuk-cim"
@@ -24,7 +26,8 @@ export function ReplaceSection() {
 
 export function IntegrationsSection() {
   return (
-    <section className="py-20 sm:py-28" aria-labelledby="integraciok-cim">
+    <section className="relative isolate overflow-hidden py-20 sm:py-28" aria-labelledby="integraciok-cim">
+      <Backdrop variant="glow" />
       <Container>
         <SectionHeader
           id="integraciok-cim"
@@ -58,7 +61,8 @@ export function IntegrationsSection() {
 
 export function ProcessSection() {
   return (
-    <section className="bg-white py-20 sm:py-28" aria-labelledby="folyamat-cim">
+    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28" aria-labelledby="folyamat-cim">
+      <Backdrop variant="dots" />
       <Container>
         <SectionHeader
           id="folyamat-cim"
@@ -90,7 +94,8 @@ export function ProcessSection() {
 
 export function PrinciplesSection() {
   return (
-    <section className="on-dark bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+    <section className="on-dark relative isolate overflow-hidden bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+      <Backdrop variant="dark" />
       <Container>
         <SectionHeader
           id="elvek-cim"
@@ -116,7 +121,8 @@ export function PrinciplesSection() {
 
 export function AboutTeaser() {
   return (
-    <section className="py-20 sm:py-28" aria-labelledby="rolunk-cim">
+    <section className="relative isolate overflow-hidden py-20 sm:py-28" aria-labelledby="rolunk-cim">
+      <Backdrop variant="soft" />
       <Container>
         <div className="grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
           <div className="min-w-0" data-reveal>

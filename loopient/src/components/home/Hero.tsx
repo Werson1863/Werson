@@ -1,16 +1,12 @@
 import { HeroMock } from "@/components/mock/HeroMock";
 import { ArrowLink, Container } from "@/components/ui";
 import Link from "next/link";
+import { Backdrop } from "@/components/Backdrop";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-16 pt-14 sm:pb-24 sm:pt-24" aria-labelledby="hero-cim">
-      {/* finom narancs fény a háttérben */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[-12rem] h-[36rem] w-[60rem] max-w-none -translate-x-1/2 rounded-full opacity-60 blur-3xl"
-        style={{ background: "radial-gradient(closest-side, rgb(253 186 116 / 0.55), rgb(253 186 116 / 0))" }}
-      />
+    <section className="relative isolate overflow-hidden pb-16 pt-14 sm:pb-24 sm:pt-24" aria-labelledby="hero-cim">
+      <Backdrop variant="hero" />
       <Container className="relative text-center">
         <p className="enter inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-[0.8125rem] font-semibold text-muted shadow-[var(--shadow-card)]" style={{ ["--i" as string]: 0 }}>
           <span className="size-1.5 rounded-full bg-orange" aria-hidden="true" />
