@@ -11,6 +11,11 @@ Minden, ami a Loopientről eddig született: promptok szó szerint, beszélgeté
 | [`decisions.md`](decisions.md) | Döntésnapló: mit miért választottunk, és mi van még nyitva |
 | [`TODO.md`](TODO.md) | Élesítés előtt kitöltendő tételek, felelőssel |
 | [`../CHANGELOG.md`](../CHANGELOG.md) | Verziók |
+| [`website-audit.md`](website-audit.md) | Weboldal-audit: tartalom, konverzió, SEO, bizalom (2026-10-09) |
+| [`website-content-strategy.md`](website-content-strategy.md) | Tartalomstratégia és üzenethierarchia (jóváhagyásra vár) |
+| [`website-content-inventory.md`](website-content-inventory.md) | Oldal- és szekcióleltár |
+| [`website-content-progress.md`](website-content-progress.md) | Tartalomfejlesztés státusztáblája |
+| [`../.claude/skills/loopient-website-copy/`](../.claude/skills/loopient-website-copy/SKILL.md) | Claude Code skill a szekciónkénti szövegíráshoz, jóváhagyási kapuval |
 
 ## Idővonal (UTC)
 
@@ -26,6 +31,7 @@ Minden, ami a Loopientről eddig született: promptok szó szerint, beszélgeté
 | 2026-10-09 00:07 | v1: „Hogy tudom megnézni?”, válasz: helyi futtatás vagy privát előnézet | nyitva maradt |
 | 2026-10-09 00:16 | v2 kész: arculati csomag, szövegkönyv, design rendszer, weboldal | [beszélgetés](conversations/2026-10-08_v2_arculat-es-weboldal.md) |
 | 2026-10-09 00:2x | Külön `loopient` repó kérése; ez a repó | [prompt](prompts/2026-10-09_v2-02_github-repo-letrehozasa.md) |
+| 2026-10-09 | Tartalomfejlesztés indul: audit, stratégiai javaslat, leltár, skill (a weboldal nem változott) | [audit](website-audit.md) · [stratégia](website-content-strategy.md) |
 
 A v1 és a v2 munkamenet részben párhuzamosan futott (23:36 és 00:07 között).
 
