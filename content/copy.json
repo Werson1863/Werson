@@ -1,0 +1,1031 @@
+{
+  "_info": "Loopient szövegkönyv – egyetlen forrás a weboldalnak és a copy.md-nek. A {email}, {phone} helyőrzőket a site/site.config.ts tölti ki. A [TODO: …] jelölésű részeket élesítés előtt ki kell tölteni. A mock-UI kártyák adatai PÉLDA adatok, nem állítások.",
+  "brand": {
+    "name": "Loopient",
+    "descriptor": "Business automation",
+    "descriptorHu": "Üzleti automatizálás",
+    "legalName": "Loopient [TODO: cégforma, pl. Kft. / egyéni vállalkozó]",
+    "slogan": "Te döntesz. A rutin megy magától.",
+    "area": "Debrecen és környéke · távolról bárhonnan",
+    "positioning": "A Loopient a Debrecen környéki és távoli kis- és középvállalkozásoknak építi meg azokat az automatizálásokat, amelyek leveszik a csapat válláról az ismétlődő adminisztrációt, a meglévő rendszereikre építve, érthetően átadva.",
+    "promise": "Kevesebb kézi másolgatás, több idő arra, ami tényleg a te munkád. Csak azt automatizáljuk, aminek kézzelfogható haszna van, és úgy adjuk át, hogy értsd és irányítsd.",
+    "principles": [
+      {
+        "title": "Előbb értjük, aztán építünk",
+        "text": "Felmérés nélkül nem javaslunk eszközt. Megnézzük, hogyan dolgozol most, és megmondjuk, mit érdemes automatizálni, és mit nem."
+      },
+      {
+        "title": "Az ember a hurokban marad",
+        "text": "Ahol döntés kell, ott jóváhagyási pont van. A rendszer előkészít, te döntesz, minden más megy magától."
+      },
+      {
+        "title": "Átlátható és átadható",
+        "text": "A megoldás a te fiókjaidban fut, dokumentálva. Érted, mi történik, és nem függsz tőlünk."
+      }
+    ],
+    "slogans": [
+      {
+        "text": "Te döntesz. A rutin megy magától.",
+        "recommended": true,
+        "why": "Két rövid mondat: az első a kontrollt mondja ki (az ember a hurokban, ez a Loopient név gondolata), a második a hasznot. Tegező, nem ígér számot, és a hero-tól az e-mail aláírásig mindenhol elfér."
+      },
+      {
+        "text": "Ami ismétlődik, az menjen magától."
+      },
+      {
+        "text": "Automatizálás, emberi léptékben."
+      },
+      {
+        "text": "Kevesebb kattintás. Több munkaidő."
+      },
+      {
+        "text": "Ismétlődő munka helyett működő folyamatok."
+      },
+      {
+        "text": "A rendszereid végre beszélnek egymással."
+      },
+      {
+        "text": "Te maradsz a hurokban. A rutin nem."
+      },
+      {
+        "text": "Zárd rövidre a rutint."
+      }
+    ],
+    "bios": {
+      "oneSentence": "A Loopient Debrecenből, és távolról bárhová, segít kis- és középvállalkozásoknak automatizálni az ismétlődő adminisztrációt, a már használt rendszereikre építve.",
+      "fiftyWords": "A Loopient üzleti automatizálással foglalkozik Debrecenben és környékén, távolról pedig bárhol az országban. Kis- és középvállalkozásoknak építjük meg azokat a folyamatokat, amelyek leveszik a csapat válláról a riportkészítést, a dokumentumok rendezését és az adatok kézi másolgatását. A meglévő rendszereidre építünk, és ahol döntés kell, ott te döntesz. Az első lépés egy beszélgetés.",
+      "hundredFiftyWords": "A Loopient üzleti automatizálással foglalkozik. Debrecenben és környékén személyesen is, távolról pedig bárhol az országban dolgozunk olyan kis- és középvállalkozásokkal, ahol a csapat idejének túl nagy részét viszi el az ismétlődő adminisztráció: riportok összerakása, számlák és dokumentumok rendezése, adatok másolgatása egyik rendszerből a másikba.\n\nNem hozunk új szoftvert csak azért, hogy legyen. Először megnézzük, hogyan dolgozol most, és őszintén megmondjuk, mit érdemes automatizálni, és mit nem. Utána a meglévő eszközeidre építünk (táblázat, számlázó, webshop, CRM), kis lépésekben, a te adataiddal tesztelve.\n\nNálunk az automatizálás nem azt jelenti, hogy kikerülsz a folyamatból. Ahol döntés kell, ott jóváhagyási pont van, minden más megy magától. A kész megoldást dokumentálva, a te fiókjaidban adjuk át, hogy értsd, irányítsd, és ne függj tőlünk.\n\nA Loopient alapítója Péter. [TODO: 1 mondat Péter szakmai hátteréről.]",
+      "linkedinHeadline": "Üzleti automatizálás kis- és középvállalkozásoknak · Debrecen és távolról",
+      "emailFooter": "Loopient · Üzleti automatizálás · Debrecen és távolról · {email} · {phone}"
+    }
+  },
+  "meta": {
+    "siteName": "Loopient",
+    "titleTemplate": "%s | Loopient",
+    "defaultTitle": "Loopient – Üzleti automatizálás Debrecenben és távolról",
+    "defaultDescription": "Riportok, dokumentumok és rendszerek automatizálása kis- és középvállalkozásoknak, a meglévő eszközeidre építve. Debrecen és környéke, távolról bárhol.",
+    "ogImageAlt": "Loopient – Te döntesz. A rutin megy magától.",
+    "pages": {
+      "home": {
+        "title": "Loopient – Üzleti automatizálás Debrecenben és távolról",
+        "description": "Riportok, dokumentumok és rendszerek automatizálása kis- és középvállalkozásoknak, a meglévő eszközeidre építve. Debrecen és környéke, távolról bárhol."
+      },
+      "solutions": {
+        "title": "Megoldások: riport-, dokumentum- és rendszerautomatizálás",
+        "description": "Riportok, számlák, dokumentumok, jóváhagyások és rendszerek összekötése. Nézd meg, milyen ismétlődő feladatokat vesz le rólad a Loopient."
+      },
+      "about": {
+        "title": "Rólunk – Péter és a Loopient",
+        "description": "Ki áll a Loopient mögött, és hogyan dolgozunk: előbb értjük, aztán építünk, és ahol döntés kell, ott te döntesz. Debrecen és távolról."
+      },
+      "contact": {
+        "title": "Kapcsolat – beszéljünk a folyamataidról",
+        "description": "Írd le röviden, melyik ismétlődő feladat visz el sok időt. Visszajelzünk, és egyeztetünk egy kötetlen beszélgetést. Debrecen és online."
+      },
+      "privacy": {
+        "title": "Adatkezelési tájékoztató",
+        "description": "Hogyan kezeli a Loopient a kapcsolatfelvételi űrlapon megadott adatokat, milyen sütiket használ, és milyen jogaid vannak."
+      },
+      "imprint": {
+        "title": "Impresszum",
+        "description": "A Loopient weboldal üzemeltetőjének és tárhelyszolgáltatójának adatai."
+      },
+      "notFound": {
+        "title": "Az oldal nem található",
+        "description": "Ez az oldal nem létezik vagy elköltözött."
+      }
+    }
+  },
+  "nav": {
+    "items": [
+      {
+        "label": "Megoldások",
+        "href": "/megoldasok"
+      },
+      {
+        "label": "Rólunk",
+        "href": "/rolunk"
+      },
+      {
+        "label": "GYIK",
+        "href": "/#gyik"
+      },
+      {
+        "label": "Kapcsolat",
+        "href": "/kapcsolat"
+      }
+    ],
+    "cta": {
+      "label": "Beszéljünk",
+      "href": "/kapcsolat"
+    },
+    "homeLabel": "Loopient – főoldal",
+    "openMenu": "Menü megnyitása",
+    "closeMenu": "Menü bezárása",
+    "mainNavLabel": "Fő navigáció",
+    "skipLink": "Ugrás a tartalomhoz"
+  },
+  "announcement": {
+    "text": "Debrecenben és környékén személyesen, máshol online dolgozunk.",
+    "link": {
+      "label": "Így dolgozunk",
+      "href": "/#folyamat"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Üzleti automatizálás · Debrecen és távolról",
+      "titleLines": [
+        "Te döntesz.",
+        "A rutin megy",
+        "magától."
+      ],
+      "lead": "Riportok, számlák, adatmásolás, jóváhagyások: megépítjük azokat az automatizálásokat, amelyek a meglévő rendszereidben futnak, és csak ott kérnek tőled figyelmet, ahol tényleg dönteni kell.",
+      "primary": {
+        "label": "Beszéljünk a folyamataidról",
+        "href": "/kapcsolat"
+      },
+      "secondary": {
+        "label": "Megoldások",
+        "href": "/megoldasok"
+      },
+      "note": "Kötetlen első beszélgetés, online vagy Debrecenben.",
+      "mock": {
+        "title": "Ma reggel, automatikusan",
+        "badge": "Példa",
+        "date": "Kedd, 07:30",
+        "items": [
+          {
+            "time": "06:30",
+            "icon": "report",
+            "text": "Heti értékesítési riport elkészült",
+            "status": "Jóváhagyásra vár",
+            "tone": "wait"
+          },
+          {
+            "time": "06:42",
+            "icon": "inbox",
+            "text": "14 beérkező számla elnevezve és iktatva",
+            "status": "Kész",
+            "tone": "done"
+          },
+          {
+            "time": "07:05",
+            "icon": "sync",
+            "text": "Webshop-rendelések átvezetve a számlázóba",
+            "status": "Kész",
+            "tone": "done"
+          },
+          {
+            "time": "07:15",
+            "icon": "users",
+            "text": "3 új ajánlatkérés kiosztva a csapatnak",
+            "status": "Kész",
+            "tone": "done"
+          }
+        ],
+        "footer": "4 feladat lefutott · 1 vár rád"
+      }
+    },
+    "featuresIntro": {
+      "eyebrow": "Mit csinálunk",
+      "title": "Három terület, ahol a legtöbb idő elfolyik.",
+      "lead": "A legtöbb kis cégnél ugyanazok a feladatok ismétlődnek hétről hétre. Ezeket vesszük le a válladról."
+    },
+    "features": [
+      {
+        "id": "riportok",
+        "eyebrow": "Riportok",
+        "title": "Riportok, amik elkészülnek, mire beérsz.",
+        "text": "Összegyűjtjük az adatokat a számlázóból, a webshopból vagy a táblázataidból, és a riport a megadott időben elkészül. Elküldés előtt jóváhagyhatod, vagy beállíthatod, hogy menjen magától.",
+        "bullets": [
+          "Heti és havi kimutatások ütemezve",
+          "Jóváhagyás egy kattintással",
+          "Ugyanaz a formátum minden alkalommal"
+        ],
+        "mock": {
+          "title": "Heti értékesítési összesítő",
+          "subtitle": "41. hét · automatikusan összeállítva",
+          "badge": "Példa",
+          "rows": [
+            {
+              "label": "Bevétel",
+              "value": "4 280 000 Ft",
+              "delta": "+6%"
+            },
+            {
+              "label": "Új rendelés",
+              "value": "312",
+              "delta": "+18"
+            },
+            {
+              "label": "Átlagos kosár",
+              "value": "13 718 Ft",
+              "delta": "−2%"
+            }
+          ],
+          "bars": [
+            42,
+            55,
+            48,
+            66,
+            58,
+            74,
+            69
+          ],
+          "toggleLabel": "Küldés előtt jóváhagyom",
+          "toggleOn": "Bekapcsolva",
+          "toggleOff": "Kikapcsolva",
+          "action": "Jóváhagyás és küldés",
+          "recipients": "Címzettek: vezetőség, könyvelés",
+          "autoSendNote": "Jóváhagyás nélkül megy ki minden hétfőn 07:00-kor."
+        }
+      },
+      {
+        "id": "dokumentumok",
+        "eyebrow": "Dokumentumok",
+        "title": "Dokumentumok a helyükön, határidővel.",
+        "text": "Beérkező számlák, szerződések, igazolások: a rendszer felismeri, elnevezi, a megfelelő mappába teszi, és csak azt jelzi, ami tőled vár valamit.",
+        "bullets": [
+          "E-mailből egyenesen a mappába",
+          "Egységes elnevezés és iktatás",
+          "„Rád vár” jelzés csak ott, ahol kell"
+        ],
+        "mock": {
+          "title": "Beérkezett dokumentumok",
+          "badge": "Példa",
+          "filter": "Ma",
+          "items": [
+            {
+              "name": "Szamla_2026-10-08_beszallito.pdf",
+              "meta": "Számla · iktatva",
+              "status": "Iktatva",
+              "tone": "done"
+            },
+            {
+              "name": "Szerzodes_karbantartas_v2.pdf",
+              "meta": "Szerződés · aláírásra vár",
+              "status": "Rád vár",
+              "tone": "wait"
+            },
+            {
+              "name": "Teljesitesi-igazolas_szept.pdf",
+              "meta": "Igazolás · továbbítva a könyvelőnek",
+              "status": "Továbbítva",
+              "tone": "done"
+            },
+            {
+              "name": "Ajanlat_irodaszer_okt.pdf",
+              "meta": "Ajánlat · összevetve az előzővel",
+              "status": "Iktatva",
+              "tone": "done"
+            }
+          ]
+        }
+      },
+      {
+        "id": "rendszerek",
+        "eyebrow": "Rendszerek",
+        "title": "A rendszereid végre beszélnek egymással.",
+        "text": "Nem kell újabb szoftvert bevezetned. Összekötjük, amit már használsz, hogy egy adatot csak egyszer kelljen beírni, és mindenhol ugyanaz legyen.",
+        "bullets": [
+          "CRM, számlázó, webshop és táblázat összekötve",
+          "Hibánál értesítés, nem csendes leállás",
+          "A te fiókjaidban fut, nem nálunk"
+        ],
+        "mock": {
+          "title": "Szinkron állapota",
+          "badge": "Példa",
+          "nodes": [
+            {
+              "name": "CRM",
+              "detail": "Ügyfelek, ajánlatok"
+            },
+            {
+              "name": "Számlázó",
+              "detail": "Számlák, díjbekérők"
+            },
+            {
+              "name": "Táblázat",
+              "detail": "Kimutatások"
+            }
+          ],
+          "status": "Szinkronizálva",
+          "statusDetail": "2 perce · 0 hiba",
+          "log": [
+            "Új ügyfél → számlázó: létrehozva",
+            "Kifizetett számla → CRM: státusz frissítve",
+            "Havi összesítő → táblázat: sorok hozzáadva"
+          ]
+        }
+      }
+    ],
+    "processes": {
+      "eyebrow": "Tipikus folyamatok",
+      "title": "Mit automatizálhatunk nálad?",
+      "lead": "Néhány gyakori példa. Ha a te folyamatod nincs köztük, az nem gond: a felmérésen derül ki, mi éri meg.",
+      "filterLabel": "Szűrés terület szerint",
+      "all": "Mind",
+      "categories": [
+        {
+          "id": "penzugy",
+          "label": "Pénzügy"
+        },
+        {
+          "id": "ertekesites",
+          "label": "Értékesítés"
+        },
+        {
+          "id": "ugyfelszolgalat",
+          "label": "Ügyfélszolgálat"
+        },
+        {
+          "id": "hr",
+          "label": "HR"
+        },
+        {
+          "id": "mukodes",
+          "label": "Működés"
+        }
+      ],
+      "items": [
+        {
+          "category": "penzugy",
+          "icon": "inbox",
+          "title": "Bejövő számlák iktatása",
+          "text": "E-mailből a könyvelő mappájába, egységesen elnevezve és listába gyűjtve."
+        },
+        {
+          "category": "penzugy",
+          "icon": "time",
+          "title": "Kintlévőség-emlékeztetők",
+          "text": "Lejárt számlákra udvarias, ütemezett emlékeztető, küldés előtti jóváhagyással."
+        },
+        {
+          "category": "ertekesites",
+          "icon": "users",
+          "title": "Ajánlatkérések kiosztása",
+          "text": "Webes űrlapról a CRM-be, felelőssel, határidővel és automatikus visszaigazolással."
+        },
+        {
+          "category": "ertekesites",
+          "icon": "report",
+          "title": "Heti értékesítési riport",
+          "text": "Számlázóból és webshopból összerakva, minden hétfő reggel ugyanabban a formában."
+        },
+        {
+          "category": "ugyfelszolgalat",
+          "icon": "chat",
+          "title": "Beérkező levelek előszűrése",
+          "text": "Kategorizálás és válaszvázlat. Az ügyintéző csak ellenőriz és küld."
+        },
+        {
+          "category": "ugyfelszolgalat",
+          "icon": "approval",
+          "title": "Visszajelzések összegyűjtése",
+          "text": "Lezárt ügyek után rövid kérdőív, az eredmények egy táblázatban."
+        },
+        {
+          "category": "hr",
+          "icon": "users",
+          "title": "Új kolléga beléptetése",
+          "text": "Fiókok, dokumentumok, ellenőrzőlista: minden belépőnél ugyanaz, semmi nem marad ki."
+        },
+        {
+          "category": "hr",
+          "icon": "approval",
+          "title": "Szabadságkérések jóváhagyása",
+          "text": "Kérés, jóváhagyás, naptárbejegyzés és nyilvántartás egy folyamatban."
+        },
+        {
+          "category": "mukodes",
+          "icon": "sync",
+          "title": "Készlet- és rendelésszinkron",
+          "text": "Webshop, raktárkészlet és számlázó összhangban, kézi átvezetés nélkül."
+        },
+        {
+          "category": "mukodes",
+          "icon": "document",
+          "title": "Havi zárás előkészítése",
+          "text": "A könyvelőnek kellő anyagok összegyűjtve, ellenőrizve, egy helyen."
+        }
+      ],
+      "empty": "Ebben a kategóriában most nincs példa.",
+      "countLabel": "{n} példa látható"
+    },
+    "integrations": {
+      "eyebrow": "Integrációk",
+      "title": "Azokkal az eszközökkel dolgozunk, amiket már használsz.",
+      "lead": "Ha egy rendszernek van API-ja vagy exportja, jó eséllyel összeköthető. Az alábbiak gyakori példák, nem teljes lista.",
+      "_todo": "[TODO: ellenőrizd, hogy a listában csak olyan eszköz szerepeljen, amellyel ténylegesen dolgoztál vagy dolgozni fogsz.]",
+      "items": [
+        "Google Workspace",
+        "Microsoft 365",
+        "Excel",
+        "Google Táblázatok",
+        "Gmail",
+        "Outlook",
+        "Számlázz.hu",
+        "Billingo",
+        "Shopify",
+        "WooCommerce",
+        "HubSpot",
+        "Pipedrive",
+        "Slack",
+        "Microsoft Teams",
+        "Notion",
+        "Airtable",
+        "Make",
+        "n8n"
+      ],
+      "more": "…és még sok más"
+    },
+    "process": {
+      "eyebrow": "Folyamat",
+      "title": "Így dolgozunk",
+      "lead": "Három lépés, mindegyik végén látod, hol tartunk, és te döntesz a továbblépésről.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Felmérés",
+          "text": "Átnézzük, hol megy el az idő. Egy beszélgetés és a valós folyamataid alapján megmondjuk, mit érdemes automatizálni, és mit nem.",
+          "result": "Eredmény: rövid, priorizált lista becsült ráfordítással."
+        },
+        {
+          "number": "02",
+          "title": "Megépítés",
+          "text": "Kis lépésekben építünk, a te fiókjaidban, a te adataiddal tesztelve. Minden lépést látsz és jóváhagysz.",
+          "result": "Eredmény: működő automatizálás, éles adatokon kipróbálva."
+        },
+        {
+          "number": "03",
+          "title": "Átadás és gondozás",
+          "text": "Dokumentációval adjuk át, megmutatjuk a csapatnak, és ha kéred, figyeljük és karbantartjuk.",
+          "result": "Eredmény: érthető leírás, betanított csapat, nyugodt hétfők."
+        }
+      ]
+    },
+    "principles": {
+      "eyebrow": "Alapelveink",
+      "title": "Automatizálás, emberi léptékben."
+    },
+    "aboutTeaser": {
+      "eyebrow": "Rólunk",
+      "title": "Szia, Péter vagyok.",
+      "text": "A Loopient alapítója. [TODO: 1–2 mondat Péter szakmai hátteréről: milyen területen dolgozott eddig, milyen rendszerekkel.] Abban hiszek, hogy a jó automatizálás csendes: nem kell rá figyelni, csak ott szól, ahol tényleg dönteni kell.",
+      "link": {
+        "label": "Bővebben rólunk",
+        "href": "/rolunk"
+      },
+      "photoCaption": "Péter, a Loopient alapítója"
+    },
+    "faqIntro": {
+      "eyebrow": "GYIK",
+      "title": "Gyakori kérdések",
+      "lead": "Ha nem találod a választ, írj nyugodtan, szívesen válaszolunk."
+    },
+    "cta": {
+      "title": "Melyik feladatod ismétlődik minden héten?",
+      "text": "Mondd el egy kötetlen beszélgetésben. Megnézzük, megéri-e automatizálni, és ha igen, hogyan.",
+      "primary": {
+        "label": "Beszéljünk",
+        "href": "/kapcsolat"
+      },
+      "secondary": {
+        "label": "Írj e-mailt",
+        "href": "mailto:{email}"
+      },
+      "photoAlt": "Péter, a Loopient alapítója, fekete-fehér portré"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Mekkora cégnek éri meg az automatizálás?",
+        "a": "Már egy pár fős csapatnál is megérheti, ha van olyan feladat, ami hetente vagy naponta ugyanúgy ismétlődik. A felmérésen őszintén megmondjuk, ha nálad (még) nem éri meg."
+      },
+      {
+        "q": "Kell ehhez új szoftvert vásárolnom?",
+        "a": "Általában nem. A meglévő rendszereidre építünk. Ha egy összekötő eszköz (például Make vagy n8n) előfizetése szükséges, azt és a várható havi költségét előre megmondjuk."
+      },
+      {
+        "q": "Mennyibe kerül?",
+        "a": "A felmérés után fix ajánlatot adunk, nem óradíjas meglepetést. [TODO: árazási modell és kiinduló ár, pl. „egyszerű folyamat … Ft-tól”.]"
+      },
+      {
+        "q": "Mennyi idő alatt készül el egy automatizálás?",
+        "a": "A felmérés után pontos ütemtervet kapsz. Egy egyszerű, egy-két rendszert érintő folyamat jellemzően gyorsabban elkészül, mint egy több csapatot érintő projekt. [TODO: tipikus átfutási idők megadása.]"
+      },
+      {
+        "q": "Mi történik, ha valami elromlik?",
+        "a": "Minden automatizálás naplóz, és hiba esetén értesítést küld, nem áll le csendben. A kritikus lépéseknél jóváhagyási pont van. Ha kéred, gondozási megállapodás keretében mi figyeljük és javítjuk. [TODO: gondozási feltételek.]"
+      },
+      {
+        "q": "Biztonságban vannak az adataim?",
+        "a": "A megoldás a te fiókjaidban fut, és csak a feltétlenül szükséges hozzáférést kérjük. A személyes adatokat a GDPR szerint kezeljük, igény esetén adatfeldolgozási megállapodást kötünk."
+      },
+      {
+        "q": "Használtok mesterséges intelligenciát?",
+        "a": "Ott, ahol valóban segít: például beérkező levelek kategorizálására vagy dokumentumokból adatok kinyerésére. Ilyenkor mindig van emberi ellenőrzés, és megmondjuk, melyik szolgáltató dolgozza fel az adatot."
+      },
+      {
+        "q": "Csak debreceni cégekkel dolgoztok?",
+        "a": "Nem. Debrecenben és környékén személyesen is találkozunk, máshol online dolgozunk, ugyanolyan folyamattal."
+      }
+    ]
+  },
+  "solutions": {
+    "hero": {
+      "eyebrow": "Megoldások",
+      "titleLines": [
+        "Ahol a legtöbb idő elmegy,",
+        "ott kezdjük."
+      ],
+      "lead": "Hat terület, ahol a kis- és középvállalkozásoknál a legtöbb ismétlődő munka van. Mindegyiknél a meglévő eszközeidre építünk."
+    },
+    "areas": [
+      {
+        "id": "riportok",
+        "icon": "report",
+        "title": "Riportok és kimutatások",
+        "problem": "Minden hét elején valaki órákig másolja össze a számokat több rendszerből.",
+        "solution": "A riport ütemezetten, mindig ugyanabban a formában elkészül, és jóváhagyás után megy a címzetteknek.",
+        "examples": [
+          "Heti értékesítési összesítő",
+          "Havi cash-flow kimutatás",
+          "Projekt-előrehaladás a vezetőségnek"
+        ]
+      },
+      {
+        "id": "dokumentumok",
+        "icon": "document",
+        "title": "Dokumentum- és számlakezelés",
+        "problem": "A számlák és szerződések e-mailekben, letöltésekben és asztalon szétszórva vannak.",
+        "solution": "A beérkező dokumentumok automatikusan elnevezve, iktatva, a megfelelő helyre kerülnek, a teendők pedig jelzést kapnak.",
+        "examples": [
+          "Bejövő számlák a könyvelőnek",
+          "Szerződések lejárat-figyelése",
+          "Teljesítési igazolások gyűjtése"
+        ]
+      },
+      {
+        "id": "rendszerek",
+        "icon": "integration",
+        "title": "Rendszerek összekötése",
+        "problem": "Ugyanazt az adatot három helyre kell beírni, és sosem egyezik mindenhol.",
+        "solution": "Összekötjük a CRM-et, a számlázót, a webshopot és a táblázatokat, hogy az adat egyszer kerüljön be, és mindenhol frissüljön.",
+        "examples": [
+          "Webshop → számlázó → könyvelés",
+          "CRM ↔ számlázó ügyféladatok",
+          "Űrlap → CRM → értesítés"
+        ]
+      },
+      {
+        "id": "jovahagyas",
+        "icon": "approval",
+        "title": "Jóváhagyási folyamatok",
+        "problem": "A kérések chatben és e-mailben vesznek el, senki sem tudja, mi hol tart.",
+        "solution": "Egyértelmű folyamat: kérés, értesítés, jóváhagyás egy kattintással, nyilvántartás és visszakereshetőség.",
+        "examples": [
+          "Beszerzési igények",
+          "Szabadságkérések",
+          "Ajánlatok belső jóváhagyása"
+        ]
+      },
+      {
+        "id": "kommunikacio",
+        "icon": "chat",
+        "title": "Ügyfél- és csapatkommunikáció",
+        "problem": "Visszaigazolások, emlékeztetők, státuszértesítések: mind kézzel mennek, vagy el sem mennek.",
+        "solution": "A rutinüzenetek a megfelelő pillanatban mennek ki, személyre szabva, a te hangodon.",
+        "examples": [
+          "Ajánlatkérés-visszaigazolás",
+          "Fizetési emlékeztető",
+          "Időpont-emlékeztető"
+        ]
+      },
+      {
+        "id": "mi",
+        "icon": "inbox",
+        "title": "MI-vel támogatott feldolgozás",
+        "problem": "Sok a szabad szöveges e-mail és PDF, amiből kézzel kell kiszedni az adatot.",
+        "solution": "Mesterséges intelligencia kategorizál, kinyeri az adatokat és válaszvázlatot ír, ember ellenőriz, mielőtt bármi kimegy.",
+        "examples": [
+          "Levelek kategorizálása",
+          "Adatkinyerés számlákból",
+          "Válaszvázlatok az ügyfélszolgálatnak"
+        ]
+      }
+    ],
+    "labels": {
+      "problem": "A gond",
+      "solution": "Amit építünk",
+      "examples": "Példák"
+    },
+    "engagement": {
+      "eyebrow": "Együttműködés",
+      "title": "Kezdd kicsiben, bővítsd, ha beválik.",
+      "lead": "Nem kell rögtön mindent automatizálni. A legtöbb ügyfél egyetlen folyamattal kezd.",
+      "items": [
+        {
+          "title": "Felmérés",
+          "text": "Egy beszélgetés és a folyamataid átnézése. A végén priorizált listát kapsz arról, mit érdemes automatizálni.",
+          "price": "[TODO: ár vagy „díjtalan”]",
+          "points": [
+            "Kötetlen első beszélgetés",
+            "Folyamat-áttekintés",
+            "Priorizált javaslat"
+          ]
+        },
+        {
+          "title": "Projekt",
+          "text": "Egy vagy több automatizálás megépítése fix áron, a felmérésben egyeztetett terjedelemben.",
+          "price": "[TODO: kiinduló ár]",
+          "points": [
+            "Fix ár, egyeztetett terjedelem",
+            "Tesztelés éles adatokon",
+            "Dokumentáció és betanítás"
+          ],
+          "featured": true
+        },
+        {
+          "title": "Gondozás",
+          "text": "Havi díjas figyelés, karbantartás és kisebb fejlesztések, hogy a megoldás akkor is működjön, ha a rendszereid változnak.",
+          "price": "[TODO: havidíj]",
+          "points": [
+            "Hibafigyelés és javítás",
+            "Kisebb módosítások",
+            "Rendszeres áttekintés"
+          ]
+        }
+      ],
+      "featuredLabel": "Leggyakoribb"
+    },
+    "cta": {
+      "title": "Nem találod a saját folyamatodat?",
+      "text": "Ez a lista csak ízelítő. Mondd el, mi visz el sok időt, és megnézzük, mit lehet vele kezdeni.",
+      "primary": {
+        "label": "Beszéljünk",
+        "href": "/kapcsolat"
+      },
+      "secondary": {
+        "label": "Gyakori kérdések",
+        "href": "/#gyik"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Rólunk",
+      "titleLines": [
+        "Automatizálás,",
+        "emberi léptékben."
+      ],
+      "lead": "A Loopient azért jött létre, hogy a kis cégek is hozzáférjenek ahhoz, ami a nagyoknál már alap: hogy a rutin magától menjen, és az emberek a valódi munkájukkal foglalkozhassanak."
+    },
+    "story": {
+      "title": "Miért Loopient?",
+      "paragraphs": [
+        "A név a „loop”, azaz hurok szóból jön. Minden ismétlődő feladat egy hurok: ugyanazok a lépések, újra és újra. Mi ezeket a hurkokat zárjuk rövidre úgy, hogy közben te maradsz a hurokban: ott, ahol döntés kell.",
+        "[TODO: 2–3 mondat a Loopient indulásáról: mikor indult, milyen tapasztalat vezetett ide, kiknek dolgozol szívesen.]",
+        "Nem ígérünk teljes automatizálást, és nem adunk el olyan szoftvert, amire nincs szükséged. Azt építjük meg, ami nálad kézzelfogható időt szabadít fel, és úgy adjuk át, hogy értsd."
+      ]
+    },
+    "founder": {
+      "name": "Péter [TODO: vezetéknév]",
+      "role": "Alapító, automatizálási tanácsadó",
+      "bio": "[TODO: 3–4 mondat Péterről: szakmai háttér, eddigi munkák, milyen rendszerekben jártas, mi érdekli a munkán kívül.]",
+      "quote": "A jó automatizálás csendes. Nem kell rá figyelni, csak ott szól, ahol tényleg dönteni kell.",
+      "photoAlt": "Péter, a Loopient alapítója, teljes alakos fotó",
+      "portraitAlt": "Péter, a Loopient alapítója, színes portré",
+      "linkedin": {
+        "label": "Péter a LinkedInen",
+        "href": "[TODO: LinkedIn profil URL]"
+      }
+    },
+    "facts": {
+      "title": "Hol és hogyan",
+      "items": [
+        {
+          "label": "Székhely",
+          "value": "Debrecen [TODO: pontos cím, ha publikus]"
+        },
+        {
+          "label": "Személyesen",
+          "value": "Debrecen és környéke"
+        },
+        {
+          "label": "Online",
+          "value": "Bárhonnan, videóhívásban"
+        },
+        {
+          "label": "Nyelv",
+          "value": "Magyar [TODO: angol is?]"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ismerkedjünk meg.",
+      "text": "Egy kötetlen beszélgetés, ahol inkább kérdezünk, mint ajánlunk.",
+      "primary": {
+        "label": "Beszéljünk",
+        "href": "/kapcsolat"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Kapcsolat",
+      "titleLines": [
+        "Beszéljünk a",
+        "folyamataidról."
+      ],
+      "lead": "Írd le röviden, mi visz el sok időt. Visszajelzünk, és egyeztetünk egy kötetlen beszélgetést online vagy Debrecenben."
+    },
+    "form": {
+      "title": "Írj nekünk",
+      "name": {
+        "label": "Neved",
+        "placeholder": "Kovács Anna",
+        "autocomplete": "name"
+      },
+      "email": {
+        "label": "E-mail címed",
+        "placeholder": "anna@cegnev.hu",
+        "autocomplete": "email"
+      },
+      "company": {
+        "label": "Cégnév",
+        "optional": "nem kötelező",
+        "placeholder": "Cégnév Kft.",
+        "autocomplete": "organization"
+      },
+      "teamSize": {
+        "label": "Mekkora a csapatod?",
+        "optional": "nem kötelező",
+        "options": [
+          "1–5 fő",
+          "6–20 fő",
+          "21–50 fő",
+          "50+ fő"
+        ]
+      },
+      "message": {
+        "label": "Miben segíthetünk?",
+        "placeholder": "Pl. minden hétfőn kézzel rakjuk össze az értékesítési riportot három rendszerből…",
+        "hint": "Elég pár mondat. Ne küldj jelszót vagy érzékeny adatot."
+      },
+      "honeypot": {
+        "label": "Ezt a mezőt hagyd üresen"
+      },
+      "consent": {
+        "before": "Elolvastam az ",
+        "link": "Adatkezelési tájékoztatót",
+        "after": ", és hozzájárulok, hogy a megadott adataimat a megkeresésem megválaszolása céljából kezeljétek."
+      },
+      "submit": "Üzenet küldése",
+      "submitting": "Küldés…",
+      "required": "kötelező"
+    },
+    "states": {
+      "successTitle": "Köszönjük, megkaptuk!",
+      "successText": "Hamarosan jelentkezünk a megadott e-mail címen. [TODO: válaszidő, pl. „1 munkanapon belül”.]",
+      "successAgain": "Újabb üzenet küldése",
+      "errorTitle": "Ez most nem sikerült.",
+      "errorText": "Valami hiba történt a küldéskor. Próbáld újra pár perc múlva, vagy írj közvetlenül: {email}.",
+      "validationTitle": "Néhány mezőt még javítani kell.",
+      "notConfigured": "Az űrlap küldése még nincs beállítva. Írj közvetlenül: {email}."
+    },
+    "errors": {
+      "nameRequired": "Add meg a neved.",
+      "nameTooLong": "A név legfeljebb 100 karakter lehet.",
+      "emailRequired": "Add meg az e-mail címed.",
+      "emailInvalid": "Ez nem tűnik érvényes e-mail címnek.",
+      "companyTooLong": "A cégnév legfeljebb 120 karakter lehet.",
+      "teamSizeInvalid": "Válassz a megadott lehetőségek közül.",
+      "messageRequired": "Írj pár szót arról, miben segíthetünk.",
+      "messageTooShort": "Kérjük, írj legalább 10 karaktert.",
+      "messageTooLong": "Az üzenet legfeljebb 4000 karakter lehet.",
+      "consentRequired": "A küldéshez fogadd el az adatkezelési tájékoztatót.",
+      "tooFast": "Túl gyorsan küldted el az űrlapot. Várj pár másodpercet, és próbáld újra.",
+      "rateLimited": "Túl sok üzenet érkezett rövid idő alatt. Próbáld újra később."
+    },
+    "details": {
+      "title": "Elérhetőség",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "area": "Terület",
+      "areaValue": "Debrecen és környéke személyesen, máshol online"
+    },
+    "next": {
+      "title": "Mi történik ezután?",
+      "steps": [
+        "Elolvassuk az üzeneted, és e-mailben visszajelzünk.",
+        "Egyeztetünk egy kötetlen beszélgetést online vagy Debrecenben.",
+        "Ha van értelme, rövid, priorizált javaslatot küldünk."
+      ]
+    },
+    "email": {
+      "subject": "Új megkeresés a weboldalról – {name}",
+      "intro": "Új üzenet érkezett a loopient weboldal kapcsolati űrlapján.",
+      "labels": {
+        "name": "Név",
+        "email": "E-mail",
+        "company": "Cég",
+        "teamSize": "Csapatméret",
+        "message": "Üzenet",
+        "consent": "Adatkezelési hozzájárulás",
+        "time": "Időpont"
+      },
+      "consentYes": "Igen, megadva"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Adatkezelési tájékoztató",
+      "updated": "Hatályos: [TODO: dátum]",
+      "draftNotice": "Ez egy vázlat. Élesítés előtt jogi szakemberrel ellenőriztesd, és töltsd ki a [TODO] részeket.",
+      "sections": [
+        {
+          "title": "1. Az adatkezelő",
+          "paragraphs": [
+            "Név: Loopient [TODO: cégforma, teljes cégnév]",
+            "Székhely: [TODO: cím]",
+            "Nyilvántartási szám / cégjegyzékszám: [TODO]",
+            "Adószám: [TODO]",
+            "E-mail: {email} · Telefon: {phone}"
+          ]
+        },
+        {
+          "title": "2. Milyen adatokat kezelünk, és miért?",
+          "paragraphs": [
+            "Kapcsolatfelvételi űrlap: név, e-mail cím, cégnév (nem kötelező), csapatméret (nem kötelező), az üzenet szövege. Cél: a megkeresésed megválaszolása és az esetleges együttműködés előkészítése.",
+            "Jogalap: a hozzájárulásod (GDPR 6. cikk (1) bekezdés a) pont), amelyet az űrlap elküldésekor adsz meg, és bármikor visszavonhatsz. [TODO: jogászi ellenőrzés: szerződéskötést megelőző lépés, b) pont is szóba jöhet.]",
+            "Megőrzési idő: [TODO: pl. a megkeresés lezárásától számított 1 év, vagy a hozzájárulás visszavonásáig]."
+          ]
+        },
+        {
+          "title": "3. Adatfeldolgozók",
+          "paragraphs": [
+            "Tárhely: Vercel Inc. [TODO: cím ellenőrzése], az oldal kiszolgálása.",
+            "E-mail-kézbesítés: Resend [TODO: cég neve és címe], az űrlap üzeneteinek továbbítása hozzánk.",
+            "Statisztika (csak hozzájárulással): [TODO: szolgáltató neve, pl. Plausible / Google Analytics, vagy töröld, ha nincs]."
+          ]
+        },
+        {
+          "title": "4. Sütik",
+          "paragraphs": [
+            "Az oldal működéséhez szükséges sütik és helyi tárolás: a süti-beállításod megjegyzése. Ezekhez nem kell hozzájárulás.",
+            "Statisztikai sütik: csak akkor töltődnek be, ha a sütisávban kifejezetten engedélyezed. A döntésed a lábléc „Süti-beállítások” linkjén bármikor módosíthatod."
+          ]
+        },
+        {
+          "title": "5. A jogaid",
+          "paragraphs": [
+            "Kérhetsz tájékoztatást, helyesbítést, törlést, az adatkezelés korlátozását, tiltakozhatsz, és kérheted az adataid hordozását. A hozzájárulásodat bármikor visszavonhatod a {email} címre írt levéllel.",
+            "Panasz esetén fordulhatsz a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH, 1055 Budapest, Falk Miksa utca 9–11., www.naih.hu) vagy bírósághoz."
+          ]
+        }
+      ]
+    },
+    "imprint": {
+      "title": "Impresszum",
+      "draftNotice": "Vázlat: élesítés előtt töltsd ki a [TODO] részeket.",
+      "rows": [
+        {
+          "label": "Üzemeltető",
+          "value": "Loopient [TODO: cégforma, teljes cégnév]"
+        },
+        {
+          "label": "Székhely",
+          "value": "[TODO: cím]"
+        },
+        {
+          "label": "Cégjegyzékszám / nyilvántartási szám",
+          "value": "[TODO]"
+        },
+        {
+          "label": "Adószám",
+          "value": "[TODO]"
+        },
+        {
+          "label": "Képviselő",
+          "value": "Péter [TODO: teljes név]"
+        },
+        {
+          "label": "E-mail",
+          "value": "{email}"
+        },
+        {
+          "label": "Telefon",
+          "value": "{phone}"
+        },
+        {
+          "label": "Tárhelyszolgáltató",
+          "value": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA [TODO: ellenőrizd]"
+        },
+        {
+          "label": "Kamarai tagság / engedély",
+          "value": "[TODO: ha releváns, pl. Hajdú-Bihar Vármegyei Kereskedelmi és Iparkamara]"
+        }
+      ]
+    }
+  },
+  "consent": {
+    "title": "Sütik",
+    "text": "Csak a működéshez szükséges tárolást használjuk. Ha engeded, névtelen látogatottsági statisztikát is mérünk, hogy lássuk, mi hasznos az oldalon.",
+    "accept": "Engedélyezem",
+    "decline": "Csak a szükségesek",
+    "more": "Részletek",
+    "settings": "Süti-beállítások"
+  },
+  "footer": {
+    "tagline": "Te döntesz. A rutin megy magától.",
+    "columns": [
+      {
+        "title": "Oldalak",
+        "links": [
+          {
+            "label": "Főoldal",
+            "href": "/"
+          },
+          {
+            "label": "Megoldások",
+            "href": "/megoldasok"
+          },
+          {
+            "label": "Rólunk",
+            "href": "/rolunk"
+          },
+          {
+            "label": "Kapcsolat",
+            "href": "/kapcsolat"
+          }
+        ]
+      },
+      {
+        "title": "Megoldások",
+        "links": [
+          {
+            "label": "Riportok",
+            "href": "/megoldasok#riportok"
+          },
+          {
+            "label": "Dokumentumok",
+            "href": "/megoldasok#dokumentumok"
+          },
+          {
+            "label": "Rendszerek",
+            "href": "/megoldasok#rendszerek"
+          },
+          {
+            "label": "Jóváhagyások",
+            "href": "/megoldasok#jovahagyas"
+          }
+        ]
+      },
+      {
+        "title": "Jogi",
+        "links": [
+          {
+            "label": "Adatkezelési tájékoztató",
+            "href": "/adatkezeles"
+          },
+          {
+            "label": "Impresszum",
+            "href": "/impresszum"
+          }
+        ]
+      }
+    ],
+    "contactTitle": "Elérhetőség",
+    "copyright": "© {year} Loopient. Minden jog fenntartva.",
+    "madeIn": "Debrecenből, távolról is."
+  },
+  "micro": {
+    "buttons": {
+      "primary": "Beszéljünk",
+      "contact": "Kapcsolatfelvétel",
+      "learnMore": "Bővebben",
+      "back": "Vissza",
+      "backHome": "Vissza a főoldalra",
+      "send": "Küldés",
+      "approve": "Jóváhagyás",
+      "close": "Bezárás",
+      "readMore": "Tovább olvasom"
+    },
+    "a11y": {
+      "external": "(új lapon nyílik)",
+      "approvalSwitch": "Jóváhagyás küldés előtt",
+      "faqToggle": "Válasz megjelenítése",
+      "decorative": "",
+      "todo": "Kitöltendő"
+    },
+    "notFound": {
+      "eyebrow": "404",
+      "title": "Ez az oldal nincs a hurokban.",
+      "text": "A keresett oldal nem létezik vagy elköltözött. Innen biztosan továbbjutsz:"
+    },
+    "loading": "Betöltés…"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "portrait-color": {
+    "src": "/photos/portrait-color",
+    "widths": [
+      800,
+      1200,
+      1600
+    ],
+    "ratio": [
+      4,
+      5
+    ],
+    "placeholder": true,
+    "use": "Rólunk szekció"
+  },
+  "portrait-bw": {
+    "src": "/photos/portrait-bw",
+    "widths": [
+      800,
+      1200,
+      1600
+    ],
+    "ratio": [
+      1,
+      1
+    ],
+    "placeholder": true,
+    "use": "Záró CTA fölé"
+  },
+  "full-body": {
+    "src": "/photos/full-body",
+    "widths": [
+      800,
+      1200,
+      1600
+    ],
+    "ratio": [
+      2,
+      3
+    ],
+    "placeholder": true,
+    "use": "Rólunk oldal"
+  }
+}
