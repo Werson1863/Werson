@@ -9,12 +9,12 @@ import { Icon } from "@/components/Icon";
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputCls =
-  "block w-full min-h-[48px] rounded-xl bg-white px-4 py-3 text-base text-graphite shadow-[0_0_0_1px_rgb(15_17_21/0.5)] placeholder:text-[#6b6f7b] outline-none focus-visible:shadow-[0_0_0_2px_var(--color-orange-ink)] focus-visible:outline-none aria-[invalid=true]:shadow-[0_0_0_2px_#b91c1c]";
+  "block w-full min-h-[48px] rounded-xl bg-page px-4 py-3 text-base text-ink shadow-[0_0_0_1px_rgb(255_255_255/0.32)] placeholder:text-[#8a8f9e] outline-none focus-visible:shadow-[0_0_0_2px_var(--color-orange-ink)] focus-visible:outline-none aria-[invalid=true]:shadow-[0_0_0_2px_#f87171]";
 
 function FieldError({ id, msg }: { id: string; msg?: string }) {
   if (!msg) return null;
   return (
-    <p id={id} className="mt-2 flex items-start gap-1.5 text-sm font-medium text-[#b91c1c]">
+    <p id={id} className="mt-2 flex items-start gap-1.5 text-sm font-medium text-[#fca5a5]">
       <Icon name="alert" className="mt-0.5 size-4 shrink-0" />
       <span className="wrap-anywhere">{msg}</span>
     </p>
@@ -82,7 +82,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div ref={statusRef} tabIndex={-1} role="status" className="card faq-panel p-8 text-center outline-none sm:p-12">
-        <span className="mx-auto grid size-14 place-items-center rounded-full bg-emerald-50 text-emerald-700" aria-hidden="true">
+        <span className="mx-auto grid size-14 place-items-center rounded-full bg-emerald-400/15 text-emerald-300" aria-hidden="true">
           <Icon name="check" className="size-7" />
         </span>
         <h2 className="mt-6 text-2xl font-semibold">Köszönjük, megkaptuk!</h2>
@@ -111,7 +111,7 @@ export function ContactForm() {
       aria-describedby="urlap-megjegyzes"
     >
       {status === "error" && serverError && (
-        <div ref={statusRef} tabIndex={-1} role="alert" className="faq-panel mb-6 flex items-start gap-3 rounded-xl bg-red-50 p-4 text-sm text-[#991b1b] outline-none">
+        <div ref={statusRef} tabIndex={-1} role="alert" className="faq-panel mb-6 flex items-start gap-3 rounded-xl bg-red-500/15 p-4 text-sm text-[#fecaca] outline-none">
           <Icon name="alert" className="mt-0.5 size-5 shrink-0" />
           <p className="wrap-anywhere">{serverError}</p>
         </div>
@@ -156,7 +156,7 @@ export function ContactForm() {
                   onClick={() => teamSize === size && setTeamSize("")}
                   className="peer absolute inset-0 cursor-pointer opacity-0"
                 />
-                <span className="btn tnum btn-secondary !px-4 !text-sm !font-medium peer-checked:!bg-graphite peer-checked:!text-white peer-checked:before:!bg-ink-2 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-orange-ink peer-active:scale-[0.97]">
+                <span className="btn tnum btn-secondary !px-4 !text-sm !font-medium peer-checked:!bg-orange peer-checked:!text-graphite peer-checked:before:!bg-orange peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-orange-ink peer-active:scale-[0.97]">
                   {size}
                 </span>
               </label>

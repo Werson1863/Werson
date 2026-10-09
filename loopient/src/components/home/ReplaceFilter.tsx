@@ -25,7 +25,7 @@ export function ReplaceFilter() {
               className={`btn shrink-0 !px-4 !text-sm !font-medium ${active ? "btn-primary" : "btn-secondary"}`}
             >
               {c}
-              <span className={`tnum text-xs ${active ? "text-white/70" : "text-muted"}`}>{count}</span>
+              <span className={`tnum text-xs ${active ? "text-graphite/70" : "text-muted"}`}>{count}</span>
             </button>
           );
         })}

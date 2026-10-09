@@ -20,10 +20,10 @@ export default function PrivacyPage() {
           Adatkezelési tájékoztató
         </h1>
         <div
-          className="enter mt-10 space-y-8 text-[1.0625rem] leading-relaxed text-muted [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-graphite [&_p]:mt-3"
+          className="enter mt-10 space-y-8 text-[1.0625rem] leading-relaxed text-muted [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-ink [&_p]:mt-3"
           style={{ ["--i" as string]: 2 }}
         >
-          <div className="rounded-xl bg-orange-wash p-4 text-[0.9375rem] text-graphite">
+          <div className="rounded-xl bg-orange-wash p-4 text-[0.9375rem] text-ink">
             Ez egy előzetes, általános tájékoztató. Élesítés előtt jogi szakemberrel véglegesítendő.
           </div>
           <div>

@@ -21,10 +21,10 @@ function Switch({ checked, onChange, label }: { checked: boolean; onChange: (v: 
       className="group relative -m-2 inline-flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center p-2"
     >
       <span
-        className={`relative h-6 w-10 rounded-full shadow-[inset_0_0_0_1px_rgb(15_17_21/0.08)] ${checked ? "bg-orange" : "bg-graphite/15"}`}
+        className={`relative h-6 w-10 rounded-full shadow-[inset_0_0_0_1px_rgb(255_255_255/0.08)] ${checked ? "bg-orange" : "bg-white/15"}`}
       >
         <span
-          className="absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow-[0_1px_3px_rgb(15_17_21/0.25)] transition-transform duration-200 ease-[var(--ease-out)] group-active:scale-95"
+          className="absolute left-0.5 top-0.5 size-5 rounded-full bg-white shadow-[0_1px_3px_rgb(0_0_0/0.4)] transition-transform duration-200 ease-[var(--ease-out)] group-active:scale-95"
           style={{ transform: checked ? "translateX(16px)" : "translateX(0)" }}
         />
       </span>
@@ -50,7 +50,7 @@ export function ReportsMock() {
         </StatusPill>
       }
     >
-      <ul className="divide-y divide-graphite/[0.06]">
+      <ul className="divide-y divide-white/[0.07]">
         {reports.map((r, i) => (
           <li key={r.name} className="flex items-center gap-3 px-4 py-3.5 sm:px-5">
             <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-mist" aria-hidden="true">

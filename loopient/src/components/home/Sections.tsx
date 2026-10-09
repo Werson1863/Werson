@@ -9,7 +9,7 @@ import { Backdrop } from "@/components/Backdrop";
 
 export function ReplaceSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28" aria-labelledby="kivaltjuk-cim">
+    <section className="relative isolate overflow-hidden bg-page-alt py-20 sm:py-28" aria-labelledby="kivaltjuk-cim">
       <Backdrop variant="dots" />
       <Container>
         <SectionHeader
@@ -61,7 +61,7 @@ export function IntegrationsSection() {
 
 export function ProcessSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-white py-20 sm:py-28" aria-labelledby="folyamat-cim">
+    <section className="relative isolate overflow-hidden bg-page-alt py-20 sm:py-28" aria-labelledby="folyamat-cim">
       <Backdrop variant="dots" />
       <Container>
         <SectionHeader
@@ -72,12 +72,12 @@ export function ProcessSection() {
         />
         <ol className="mt-14 grid gap-4 md:grid-cols-3">
           {processSteps.map((s, i) => (
-            <li key={s.n} className="relative min-w-0 rounded-[1.25rem] bg-page p-7 shadow-[var(--shadow-card)]" data-reveal style={{ ["--i" as string]: i }}>
+            <li key={s.n} className="relative min-w-0 rounded-[1.25rem] bg-surface p-7 shadow-[var(--shadow-card)]" data-reveal style={{ ["--i" as string]: i }}>
               <div className="flex items-baseline justify-between gap-3">
                 <span className="tnum text-5xl font-semibold tracking-[-0.04em] text-orange-ink" aria-hidden="true">
                   {s.n}
                 </span>
-                <span className="tnum rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-muted shadow-[var(--shadow-card)]">{s.meta}</span>
+                <span className="tnum rounded-full bg-mist px-2.5 py-1 text-xs font-semibold text-muted">{s.meta}</span>
               </div>
               <h3 className="mt-8 text-xl font-semibold tracking-[-0.02em]">
                 <span className="sr-only">{i + 1}. lépés: </span>
@@ -94,7 +94,7 @@ export function ProcessSection() {
 
 export function PrinciplesSection() {
   return (
-    <section className="on-dark relative isolate overflow-hidden bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+    <section className="on-dark relative isolate overflow-hidden bg-deep py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
       <Backdrop variant="dark" />
       <Container>
         <SectionHeader
@@ -133,7 +133,7 @@ export function AboutTeaser() {
                 sizes="(min-width: 1152px) 470px, (min-width: 768px) 40vw, (min-width: 400px) 384px, 92vw"
                 className="aspect-[4/5] w-full rounded-[1.75rem] object-cover shadow-[var(--shadow-raised)]"
               />
-              <div className="absolute -bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl bg-white/90 p-4 shadow-[var(--shadow-raised)] backdrop-blur-md sm:left-auto sm:right-[-1.25rem] sm:w-64">
+              <div className="absolute -bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl bg-surface/80 p-4 shadow-[var(--shadow-raised)] backdrop-blur-md sm:left-auto sm:right-[-1.25rem] sm:w-64">
                 <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-orange text-graphite" aria-hidden="true">
                   <Icon name="bolt" className="size-5" />
                 </span>

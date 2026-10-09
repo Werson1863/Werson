@@ -8,7 +8,7 @@ export function Footer() {
   const { email, phone, phoneHref, address } = site.contact;
   const year = new Date().getFullYear();
   return (
-    <footer className="on-dark relative isolate overflow-hidden bg-graphite text-white">
+    <footer className="on-dark relative isolate overflow-hidden border-t border-white/[0.06] bg-deep text-white">
       <Backdrop variant="footer" />
       <div className="mx-auto max-w-6xl px-4 pb-10 pt-16 sm:px-6">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">

@@ -19,7 +19,7 @@ export function DocumentsMock() {
         </StatusPill>
       }
     >
-      <ul className="divide-y divide-graphite/[0.06]">
+      <ul className="divide-y divide-white/[0.07]">
         {docs.map((d) => (
           <li
             key={d.name}

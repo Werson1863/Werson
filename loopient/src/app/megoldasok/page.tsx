@@ -158,7 +158,7 @@ export default function SolutionsPage() {
               <li
                 key={p.name}
                 className={`relative flex min-w-0 flex-col rounded-[1.25rem] p-7 sm:p-8 ${
-                  p.featured ? "on-dark bg-graphite text-white shadow-[var(--shadow-dark)]" : "card"
+                  p.featured ? "on-dark bg-ink-2 text-white shadow-[inset_0_0_0_1px_rgb(249_115_22/0.45),0_24px_60px_-24px_rgb(249_115_22/0.45)]" : "card"
                 }`}
                 data-reveal
                 style={{ ["--i" as string]: i }}

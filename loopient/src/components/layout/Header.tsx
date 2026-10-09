@@ -50,7 +50,7 @@ export function Header() {
       >
         <a
           href="#tartalom"
-          className="sr-only-focusable absolute left-4 top-2 z-50 rounded-full bg-graphite px-4 py-2 text-sm font-semibold text-white"
+          className="sr-only-focusable absolute left-4 top-2 z-50 rounded-full bg-orange px-4 py-2 text-sm font-semibold text-graphite"
         >
           Ugrás a tartalomra
         </a>
@@ -90,7 +90,7 @@ export function Header() {
         </div>
 
         {open && (
-          <nav id="mobil-menu" aria-label="Mobil navigáció" className="menu-panel border-t border-graphite/5 px-4 pb-5 pt-2 md:hidden">
+          <nav id="mobil-menu" aria-label="Mobil navigáció" className="menu-panel border-t border-white/10 px-4 pb-5 pt-2 md:hidden">
             <ul className="flex flex-col">
               <li>
                 <Link href="/" className="flex min-h-[48px] items-center text-lg font-semibold" aria-current={pathname === "/" ? "page" : undefined}>

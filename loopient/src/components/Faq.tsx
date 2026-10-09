@@ -20,7 +20,7 @@ export function Faq({ items }: { items: ReadonlyArray<{ q: string; a: string }> 
   };
 
   return (
-    <div className="divide-y divide-graphite/[0.08] rounded-[1.25rem] bg-white px-5 shadow-[var(--shadow-card)] sm:px-8">
+    <div className="divide-y divide-white/[0.08] rounded-[1.25rem] bg-surface px-5 shadow-[var(--shadow-card)] sm:px-8">
       {items.map((item, i) => {
         const isOpen = open === i;
         const btnId = `${baseId}-btn-${i}`;

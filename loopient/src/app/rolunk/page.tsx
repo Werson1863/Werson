@@ -82,7 +82,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="on-dark relative isolate overflow-hidden bg-graphite py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
+      <section className="on-dark relative isolate overflow-hidden bg-deep py-20 text-white sm:py-28" aria-labelledby="elvek-cim">
         <Backdrop variant="dark" />
         <Container>
           <SectionHeader id="elvek-cim" eyebrow="Alapelveink" title="Így dolgozunk – minden projektben." />

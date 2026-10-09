@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <ContactLine icon="clock" label="Elérhetőség" value={hours} />
                 </ul>
               </div>
-              <div className="on-dark rounded-[1.25rem] bg-graphite p-6 text-white shadow-[var(--shadow-dark)]">
+              <div className="on-dark rounded-[1.25rem] bg-surface p-6 text-white shadow-[var(--shadow-card)]">
                 <h2 className="text-lg font-semibold tracking-[-0.02em]">Mi történik ezután?</h2>
                 <ol className="mt-5 space-y-5">
                   {steps.map((s, i) => (

@@ -42,7 +42,7 @@ export function ArrowLink({
 }: {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "accent" | "ghost-dark";
+  variant?: "primary" | "secondary" | "accent" | "ghost-dark" | "dark";
   className?: string;
 }) {
   return (

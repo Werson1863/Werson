@@ -25,7 +25,7 @@ export function ClosingCta({
               </h2>
               <p className="mt-5 max-w-lg text-[1.0625rem] leading-relaxed text-graphite/85">{lead}</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ArrowLink href="/kapcsolat">Kérj ajánlatot</ArrowLink>
+                <ArrowLink href="/kapcsolat" variant="dark">Kérj ajánlatot</ArrowLink>
                 <Link href="/megoldasok" className="btn btn-glass-light">
                   Megoldások
                 </Link>

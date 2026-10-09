@@ -13,7 +13,7 @@ export default function ThanksPage() {
   return (
     <section className="py-24 sm:py-32">
       <Container className="max-w-xl text-center">
-        <span className="enter mx-auto grid size-16 place-items-center rounded-full bg-emerald-50 text-emerald-700" aria-hidden="true">
+        <span className="enter mx-auto grid size-16 place-items-center rounded-full bg-emerald-400/15 text-emerald-300" aria-hidden="true">
           <Icon name="check" className="size-8" />
         </span>
         <h1 className="enter mt-8 text-[2.5rem] font-semibold sm:text-5xl" style={{ ["--i" as string]: 1 }}>

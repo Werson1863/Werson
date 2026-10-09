@@ -29,13 +29,13 @@ export function SyncMock() {
           {systems.map((s, i) => (
             <div key={s.name} className="contents">
               <div className="flex w-20 shrink-0 flex-col items-center gap-2 sm:w-24">
-                <span className="grid size-12 place-items-center rounded-2xl bg-white shadow-[var(--shadow-card)]">
+                <span className="grid size-12 place-items-center rounded-2xl bg-mist shadow-[var(--shadow-card)]">
                   <Icon name={s.icon} className="size-5" />
                 </span>
                 <span className="text-xs font-semibold">{s.name}</span>
               </div>
               {i < systems.length - 1 && (
-                <div className="relative -mt-6 h-px min-w-4 flex-1 bg-graphite/15">
+                <div className="relative -mt-6 h-px min-w-4 flex-1 bg-white/15">
                   <span className="absolute left-1/2 top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange shadow-[0_0_0_4px_rgb(249_115_22/0.18)]" />
                 </div>
               )}
@@ -44,12 +44,12 @@ export function SyncMock() {
         </div>
         <p className="sr-only">A webshop, a számlázó és a könyvelés automatikusan szinkronban van.</p>
       </div>
-      <ul className="divide-y divide-graphite/[0.06] border-t border-graphite/[0.06]">
+      <ul className="divide-y divide-white/[0.07] border-t border-white/[0.07]">
         {events.map((e) => (
           <li key={e.text} className="flex items-center gap-3 px-4 py-3 text-sm sm:px-5">
             <span className="tnum w-11 shrink-0 text-xs font-medium text-muted">{e.time}</span>
             <span className="min-w-0 break-words flex-1">{e.text}</span>
-            <Icon name="check" className="size-4 shrink-0 text-emerald-700" />
+            <Icon name="check" className="size-4 shrink-0 text-emerald-300" />
           </li>
         ))}
       </ul>

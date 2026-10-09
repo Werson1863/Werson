@@ -46,9 +46,9 @@ export function Backdrop({ variant }: { variant: Variant }) {
       return (
         <div aria-hidden="true" className={fadeB}>
           <div className="bg-grid mask-fade-top absolute inset-0" />
-          {orb({ left: "50%", top: "-14rem", width: "44rem", height: "30rem", marginLeft: "-22rem", background: "rgb(253 186 116 / 0.55)", "--dx": "30px", "--dy": "20px" }, "")}
-          {orb({ left: "-8rem", top: "18rem", width: "26rem", height: "26rem", background: "rgb(249 115 22 / 0.22)", "--dx": "60px", "--dy": "-40px" }, "")}
-          {orb({ right: "-10rem", top: "8rem", width: "28rem", height: "28rem", background: "rgb(251 146 60 / 0.25)", "--dx": "-50px", "--dy": "40px" }, "")}
+          {orb({ left: "50%", top: "-14rem", width: "44rem", height: "30rem", marginLeft: "-22rem", background: "rgb(249 115 22 / 0.3)", "--dx": "30px", "--dy": "20px" }, "")}
+          {orb({ left: "-8rem", top: "18rem", width: "26rem", height: "26rem", background: "rgb(234 88 12 / 0.2)", "--dx": "60px", "--dy": "-40px" }, "")}
+          {orb({ right: "-10rem", top: "8rem", width: "28rem", height: "28rem", background: "rgb(249 115 22 / 0.18)", "--dx": "-50px", "--dy": "40px" }, "")}
           <LoopRings className="absolute left-1/2 top-[-6rem] w-[64rem] max-w-none -translate-x-1/2 sm:top-[-9rem] sm:w-[78rem] [mask-image:radial-gradient(closest-side,#000_55%,transparent)]" />
         </div>
       );
@@ -56,16 +56,16 @@ export function Backdrop({ variant }: { variant: Variant }) {
       return (
         <div aria-hidden="true" className={fadeB}>
           <div className="bg-grid mask-fade-top absolute inset-0" />
-          {orb({ left: "50%", top: "-12rem", width: "40rem", height: "24rem", marginLeft: "-20rem", background: "rgb(253 186 116 / 0.5)", "--dx": "40px", "--dy": "16px" }, "")}
-          {orb({ right: "-8rem", top: "4rem", width: "22rem", height: "22rem", background: "rgb(249 115 22 / 0.18)", "--dx": "-40px", "--dy": "30px" }, "")}
+          {orb({ left: "50%", top: "-12rem", width: "40rem", height: "24rem", marginLeft: "-20rem", background: "rgb(249 115 22 / 0.26)", "--dx": "40px", "--dy": "16px" }, "")}
+          {orb({ right: "-8rem", top: "4rem", width: "22rem", height: "22rem", background: "rgb(234 88 12 / 0.16)", "--dx": "-40px", "--dy": "30px" }, "")}
           <LoopRings className="absolute left-1/2 top-[-18rem] w-[60rem] max-w-none -translate-x-1/2 opacity-80 [mask-image:radial-gradient(closest-side,#000_50%,transparent)]" />
         </div>
       );
     case "soft":
       return (
         <div aria-hidden="true" className={fadeY}>
-          {orb({ left: "-12rem", top: "20%", width: "30rem", height: "30rem", background: "rgb(253 186 116 / 0.35)", "--dx": "50px", "--dy": "30px" }, "")}
-          {orb({ right: "-12rem", top: "55%", width: "30rem", height: "30rem", background: "rgb(249 115 22 / 0.14)", "--dx": "-40px", "--dy": "-40px" }, "")}
+          {orb({ left: "-12rem", top: "20%", width: "30rem", height: "30rem", background: "rgb(249 115 22 / 0.14)", "--dx": "50px", "--dy": "30px" }, "")}
+          {orb({ right: "-12rem", top: "55%", width: "30rem", height: "30rem", background: "rgb(234 88 12 / 0.12)", "--dx": "-40px", "--dy": "-40px" }, "")}
           <div className="bg-dots absolute inset-0 opacity-60 [mask-image:linear-gradient(to_bottom,transparent,#000_15%,#000_85%,transparent)]" />
         </div>
       );
@@ -79,7 +79,7 @@ export function Backdrop({ variant }: { variant: Variant }) {
       return (
         <div aria-hidden="true" className={fadeY}>
           <div className="bg-grid mask-fade-center absolute inset-0 opacity-80" />
-          {orb({ left: "50%", top: "30%", width: "40rem", height: "28rem", marginLeft: "-20rem", background: "rgb(253 186 116 / 0.4)", "--dx": "40px", "--dy": "-20px" }, "")}
+          {orb({ left: "50%", top: "30%", width: "40rem", height: "28rem", marginLeft: "-20rem", background: "rgb(249 115 22 / 0.18)", "--dx": "40px", "--dy": "-20px" }, "")}
         </div>
       );
     case "dark":

@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden pb-16 pt-14 sm:pb-24 sm:pt-24" aria-labelledby="hero-cim">
       <Backdrop variant="hero" />
       <Container className="relative text-center">
-        <p className="enter inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-[0.8125rem] font-semibold text-muted shadow-[var(--shadow-card)]" style={{ ["--i" as string]: 0 }}>
+        <p className="enter inline-flex items-center gap-2 rounded-full bg-surface/80 px-3 py-1.5 text-[0.8125rem] font-semibold text-muted shadow-[var(--shadow-card)]" style={{ ["--i" as string]: 0 }}>
           <span className="size-1.5 rounded-full bg-orange" aria-hidden="true" />
           Business automation · magyar KKV-knak
         </p>
@@ -17,7 +17,7 @@ export function Hero() {
             Hatékonyabb folyamatok.
           </span>
           <span className="enter block text-muted" style={{ ["--i" as string]: 2 }}>
-            Több idő a <span className="text-graphite">lényegesre.</span>
+            Több idő a <span className="text-ink">lényegesre.</span>
           </span>
         </h1>
         <p className="enter mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl" style={{ ["--i" as string]: 3 }}>
