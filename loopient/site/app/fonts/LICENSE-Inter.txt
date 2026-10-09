@@ -1,0 +1,3 @@
+Inter – Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+Licenc: SIL Open Font License 1.1 – https://openfontlicense.org
+A woff2 fájlok az eredeti Inter OTF-ekből készült részhalmazok (latin + magyar ékezetek).
