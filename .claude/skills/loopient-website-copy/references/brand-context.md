@@ -2,7 +2,7 @@
 
 > **Ez nem újabb márkaleírás.** A márkaplatform, a hangnem, a névhasználat és a szlogenek forrása a Loopient-projekt `content/brand-guide.md` fájlja, a weboldal minden szövegéé a `content/copy.json`. Ez a fájl csak azt rögzíti, ami ott nincs benne: a megbízói brief többletét, a brief és a projekt közötti eltérések kezelését, és a jelenlegi szöveg ellenőrizendő állításait.
 >
-> Állapot: 2026-10-09, a `claude/loopient-repo` ág `eb11dec` commitja alapján. A projektfájlok ennél frissebbek lehetnek; ellentmondás esetén a projekt aktuális, ellenőrizhető adata az irányadó (SKILL.md 0. pont).
+> Állapot: 2026-10-09, a `Werson1863/loopient` repó első verziója (forrás: a `Werson` repó `claude/loopient-repo` ága, `eb11dec`). A projektfájlok ennél frissebbek lehetnek; ellentmondás esetén a projekt aktuális, ellenőrizhető adata az irányadó (SKILL.md 0. pont).
 
 ## 1. Források a projektben
 

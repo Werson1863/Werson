@@ -1,6 +1,6 @@
 # Loopient weboldal – szekciótérkép
 
-> Melyik szöveg melyik `copy.json` kulcsból jön, melyik komponens jeleníti meg, és milyen címszinten. Állapot: `claude/loopient-repo` ág, `eb11dec` (2026-10-09). Módosítás előtt mindig nézd meg az aktuális komponenst: ha eltér ettől a táblázattól, a kód az irányadó.
+> Melyik szöveg melyik `copy.json` kulcsból jön, melyik komponens jeleníti meg, és milyen címszinten. Állapot: 2026-10-09, a `Werson1863/loopient` repó első verziója (forrás: `claude/loopient-repo`, `eb11dec`). Módosítás előtt mindig nézd meg az aktuális komponenst: ha eltér ettől a táblázattól, a kód az irányadó.
 
 ## Alapszabályok
 

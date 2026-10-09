@@ -32,15 +32,15 @@ Ne feltételezd, hogy a korábbi beszélgetések vagy a reference-fájlok minden
 
 ## 1. A Loopient-projekt megtalálása
 
-A Loopient-projekt gyökere az a mappa, amelyben a `content/copy.json` és a `site/site.config.ts` is megtalálható. Keresd ebben a sorrendben:
+A Loopient-projekt gyökere az a mappa, amelyben a `content/copy.json` és a `site/site.config.ts` is megtalálható. A kanonikus hely a `Werson1863/loopient` repó gyökere (ez a skill is ott van, a `.claude/skills/` alatt). Keresd ebben a sorrendben:
 
-1. **Az aktuális munkakönyvtár**, ha a `claude/loopient-repo` ág van kicsekkolva.
-2. **`loopient/` almappa** (a `claude/loopient-brand-site` ág elrendezése; azonos tartalom, régebbi munkaág).
-3. **Másik git-ág.** `git fetch origin claude/loopient-repo`, majd olvasáshoz elég ennyi: `git show origin/claude/loopient-repo:content/copy.json`. Ha nem ismert az ág neve: `git branch -r | grep -i loopient`.
+1. **Az aktuális munkakönyvtár** (a `loopient` repó vagy a `Werson` repó `claude/loopient-repo` ága).
+2. **`loopient/` almappa** (a `Werson` repó `claude/loopient-brand-site` ágának régebbi elrendezése, azonos tartalommal).
+3. **Másik git-ág.** `git branch -r | grep -i loopient`, majd olvasáshoz elég például ennyi: `git show origin/claude/loopient-repo:content/copy.json`.
 
-Fájlmódosításhoz munkakönyvtár kell (például `git worktree add ../loopient claude/loopient-repo`). Előtte tisztázd, melyik ágra kerüljön a módosítás: ha a munkamenetnek kijelölt fejlesztési ága van, az az irányadó, és ha a weboldal nem azon az ágon van, kérdezz rá, mielőtt máshová commitolsz.
+Ha a weboldal nem az aktuális munkakönyvtárban van, fájlmódosításhoz munkakönyvtár kell (például `git worktree`). Előtte tisztázd, melyik ágra kerüljön a módosítás: ha a munkamenetnek kijelölt fejlesztési ága van, az az irányadó, és ha a weboldal nem azon van, kérdezz rá, mielőtt máshová commitolsz.
 
-Ne dolgozz ezeken: `archive/v1-weboldal/` és a `claude/loopient-website` ág (v1, archív). Ha a projektet nem találod, mondd ki egyértelműen, és ne találj ki fájlneveket vagy tartalmat.
+Ne dolgozz ezeken: `archive/v1-weboldal/` (v1, archív) és a `Werson` repó régi Loopient-ágai. Ha a projektet nem találod, mondd ki egyértelműen, és ne találj ki fájlneveket vagy tartalmat.
 
 ## 2. Kötelező munkafolyamat minden szekciónál
 
