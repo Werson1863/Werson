@@ -5,118 +5,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kapás zsebhorgászszett</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Kapás: prémium mini horgászbot szett, ami elfér a zsebedben. Előjegyzés alapító áron.">
+<meta name="description" content="Kapás: 1,7 méteres karbon spiccbot egy 18 centis faragott fadobozban. Előjegyzés alapító áron.">
+<meta property="og:title" content="Kapás – horgászbot a zsebedben">
+<meta property="og:description" content="1,7 méteres karbon spiccbot egy 18 centis faragott fadobozban. Előjegyzés alapító áron.">
+<meta property="og:image" content="img/hero.jpg">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: vízszintes "horgászzsinór" vonal köti össze a szekciókat; bal oldali szöveg, jobb oldali illusztráció, mobilon egy oszlop. */
+/* Layout: zsályazöld papír alap (a termékfotók háttere), rózsafa-barna tinta; fotó + szöveg párok, mobilon egy oszlop. */
 :root {
-  --bg: #EEF0EA;        /* folyami kavics */
-  --surface: #F8F8F3;
-  --ink: #14302B;       /* fenyőzöld tinta */
-  --muted: #4F625C;
-  --line: #CBD3CB;
-  --accent: #E5532F;    /* úszó-piros */
-  --brass: #A87A2E;     /* orsó-sárgaréz */
+  --bg: #E3E7DA;        /* zsálya */
+  --surface: #EEF1E8;
+  --ink: #2B1B15;       /* sötét rózsafa */
+  --muted: #5F544B;
+  --line: #C6CCBB;
+  --accent: #8A3220;    /* rózsafa vörös */
   --on-accent: #FFFFFF;
-  --ok: #2D7A4F;
-  --err: #B3261E;
+  --bamboo: #5E7020;    /* bambuszzöld */
+  --deep: #2B1B15;
+  --deep-fg: #EEE7DC;
+  --deep-muted: #C5B8A8;
+  --ok: #2F6B3A;
+  --err: #A3261B;
   --display: "Young Serif", Georgia, "Times New Roman", serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
-  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0E1B19; --surface: #152623; --ink: #E9EEE8; --muted: #A3B4AD; --line: #2A3E3A;
-    --accent: #F06A45; --brass: #D3A657; --on-accent: #1A0D08; --ok: #6CC596; --err: #FF8A80;
+    --bg: #15110E; --surface: #1F1915; --ink: #EDE6DA; --muted: #B2A698; --line: #3A302A;
+    --accent: #D06A4C; --on-accent: #1A0C07; --bamboo: #AFC163;
+    --deep: #0C0907; --deep-fg: #EDE6DA; --deep-muted: #B2A698; --ok: #7FCB8C; --err: #FF8A7A;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0E1B19; --surface: #152623; --ink: #E9EEE8; --muted: #A3B4AD; --line: #2A3E3A;
-  --accent: #F06A45; --brass: #D3A657; --on-accent: #1A0D08; --ok: #6CC596; --err: #FF8A80;
+  --bg: #15110E; --surface: #1F1915; --ink: #EDE6DA; --muted: #B2A698; --line: #3A302A;
+  --accent: #D06A4C; --on-accent: #1A0C07; --bamboo: #AFC163;
+  --deep: #0C0907; --deep-fg: #EDE6DA; --deep-muted: #B2A698; --ok: #7FCB8C; --err: #FF8A7A;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
 img, svg { max-width: 100%; }
 a { color: inherit; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-.wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.1; text-wrap: balance; margin: 0; }
-h1 { font-size: clamp(2.5rem, 6.2vw, 4.6rem); letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); letter-spacing: -0.01em; }
 h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
-h3 { font-size: 1.3rem; }
+h3 { font-size: 1.25rem; }
 p { margin: 0; }
-.eyebrow { font: 500 0.78rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); }
-.lede { font-size: 1.15rem; color: var(--muted); max-width: 34em; }
+.eyebrow { font: 500 0.78rem/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--bamboo); }
+.lede { font-size: 1.12rem; color: var(--muted); max-width: 34em; }
+.photo { display: block; width: 100%; height: auto; border-radius: 14px; background: var(--surface); }
+figure { margin: 0; display: grid; gap: 10px; min-width: 0; }
+figcaption { font: 400 .82rem/1.4 var(--mono); color: var(--muted); }
 
 /* fejléc */
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-size: 1.5rem; }
 .brand svg { width: 38px; height: 38px; flex: none; }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 1rem/1 var(--body); padding: 15px 22px; border-radius: 999px; border: 0; cursor: pointer; text-decoration: none; transition: transform .15s ease, background .15s ease; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 1rem/1 var(--body); padding: 15px 22px; border-radius: 999px; border: 0; cursor: pointer; text-decoration: none; transition: transform .15s ease; }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { transform: translateY(-1px); }
 .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); padding: 9px 16px; font-size: .92rem; }
 
 /* hero */
-.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-block: 56px 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding-block: 48px 40px; }
 .hero-copy { display: grid; gap: 22px; min-width: 0; }
 .price-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
 .price { font-family: var(--display); font-size: 2.2rem; }
 .price-old { color: var(--muted); text-decoration: line-through; font-size: 1.1rem; }
-.price-tag { font: 500 .8rem/1 var(--mono); background: var(--ink); color: var(--bg); padding: 6px 9px; border-radius: 4px; letter-spacing: .04em; }
+.price-tag { font: 500 .78rem/1 var(--mono); background: var(--ink); color: var(--bg); padding: 6px 9px; border-radius: 4px; letter-spacing: .04em; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
 .cta-note { color: var(--muted); font-size: .92rem; }
-.hero-art { min-width: 0; }
-.hero-art svg { width: 100%; height: auto; display: block; }
-.bob { animation: bob 3.2s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
-@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+.hero-photo { min-width: 0; }
+.hero-photo .photo { aspect-ratio: 900 / 1006; object-fit: cover; box-shadow: 0 24px 48px -28px rgb(43 27 21 / .55); }
 
 /* méretsáv */
 .ruler { border-block: 1px solid var(--line); background: var(--surface); }
-.ruler .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-block: 0; }
+.ruler .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
 .ruler div { padding: 20px 16px; border-left: 1px solid var(--line); display: grid; gap: 4px; }
 .ruler div:first-child { border-left: 0; padding-left: 0; }
-.ruler b { font: 500 1.5rem/1.1 var(--mono); font-variant-numeric: tabular-nums; }
+.ruler b { font: 500 1.45rem/1.1 var(--mono); font-variant-numeric: tabular-nums; }
 .ruler span { color: var(--muted); font-size: .88rem; }
 
 section.block .wrap { padding-block: 80px; display: grid; gap: 40px; }
 .head { display: grid; gap: 14px; max-width: 40em; }
 
-/* doboz tartalma */
-.kit { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-.kit article { background: var(--surface); padding: 26px 22px; display: grid; gap: 10px; align-content: start; min-width: 0; }
-.kit .qty { font: 500 .8rem/1 var(--mono); color: var(--brass); letter-spacing: .06em; }
-.kit p { color: var(--muted); font-size: .97rem; }
+/* lépések */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; gap: 8px; align-content: start; border-top: 2px solid var(--ink); padding-top: 16px; min-width: 0; }
+.steps li::before { content: counter(s); font: 500 .85rem/1 var(--mono); color: var(--accent); }
+.steps p { color: var(--muted); font-size: .97rem; }
 
-/* helyzetek */
-.uses { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-.uses article { display: grid; gap: 8px; align-content: start; border-top: 2px solid var(--ink); padding-top: 16px; min-width: 0; }
+/* doboz tartalma */
+.kit-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: start; }
+.kit { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.kit li { display: grid; grid-template-columns: 5.6em 1fr; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.kit .qty { font: 500 .85rem/1.5 var(--mono); color: var(--bamboo); font-variant-numeric: tabular-nums; }
+.kit b { display: block; font-weight: 600; }
+.kit span.d { color: var(--muted); font-size: .92rem; }
+
+/* kivitelek */
+.variants { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.variant { display: grid; gap: 14px; min-width: 0; }
+.variant .photo { aspect-ratio: 900 / 832; object-fit: cover; }
+.variant h3 { display: flex; align-items: center; gap: 10px; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; flex: none; border: 1px solid var(--line); }
+.variant p { color: var(--muted); font-size: .97rem; }
+
+/* fogás */
+.catch { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.catch .photo { aspect-ratio: 900 / 1007; object-fit: cover; }
+.uses { display: grid; gap: 22px; }
+.uses article { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; }
 .uses p { color: var(--muted); font-size: .97rem; }
 
 /* specifikáció */
-.spec-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: start; }
+.spec-wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 48px; align-items: start; }
+.dims { width: 100%; height: auto; display: block; }
 .spec { width: 100%; border-collapse: collapse; font-size: .97rem; }
 .spec th, .spec td { text-align: left; padding: 13px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
 .spec th { font-weight: 500; color: var(--muted); width: 45%; padding-right: 16px; }
-.spec td { font-family: var(--mono); font-size: .92rem; font-variant-numeric: tabular-nums; }
+.spec td { font-family: var(--mono); font-size: .9rem; font-variant-numeric: tabular-nums; }
 
 /* előjegyzés */
-.signup { background: var(--ink); color: var(--bg); }
+.signup { background: var(--deep); color: var(--deep-fg); }
 .signup .wrap { padding-block: 80px; display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: start; }
-.signup .lede { color: color-mix(in srgb, var(--bg) 78%, var(--ink)); }
+.signup .lede { color: var(--deep-muted); }
 .signup .eyebrow { color: var(--accent); }
 .perks { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 12px; }
 .perks li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; }
@@ -127,14 +153,15 @@ section.block .wrap { padding-block: 80px; display: grid; gap: 40px; }
 form.card { background: var(--surface); color: var(--ink); border-radius: 18px; padding: 28px; display: grid; gap: 22px; min-width: 0; }
 .field { display: grid; gap: 8px; }
 .field > label, fieldset legend { font-weight: 600; font-size: .95rem; }
+fieldset legend { margin-bottom: 10px; padding: 0; }
 .hint { color: var(--muted); font-size: .85rem; font-weight: 400; }
 input[type=email], input[type=text] { font: inherit; width: 100%; padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
 input[type=email]:focus, input[type=text]:focus { border-color: var(--ink); outline: none; }
-fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 10px; min-width: 0; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips label { position: relative; }
 .chips input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
-.chips span { display: inline-block; padding: 10px 14px; border: 1.5px solid var(--line); border-radius: 999px; font-size: .93rem; cursor: pointer; transition: all .12s; background: var(--bg); }
+.chips span { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 1.5px solid var(--line); border-radius: 999px; font-size: .93rem; cursor: pointer; transition: background .12s, color .12s; background: var(--bg); }
 .chips input:checked + span { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .chips input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
 .consent { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: .88rem; color: var(--muted); align-items: start; }
@@ -147,7 +174,7 @@ form.card .btn-primary { width: 100%; padding-block: 17px; font-size: 1.05rem; }
 form.card .btn-primary[disabled] { opacity: .6; cursor: progress; }
 
 /* GYIK */
-.faq { display: grid; gap: 0; border-top: 1px solid var(--line); max-width: 760px; }
+.faq { border-top: 1px solid var(--line); max-width: 760px; }
 .faq details { border-bottom: 1px solid var(--line); }
 .faq summary { cursor: pointer; padding: 20px 0; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
 .faq summary::-webkit-details-marker { display: none; }
@@ -158,20 +185,19 @@ form.card .btn-primary[disabled] { opacity: .6; cursor: progress; }
 footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--line); }
 
 @media (max-width: 900px) {
-  .hero .wrap, .spec-wrap, .signup .wrap { grid-template-columns: 1fr; }
-  .hero .wrap { padding-block: 36px 24px; gap: 28px; }
-  .hero-art { order: -1; max-width: 520px; }
-  .kit { grid-template-columns: 1fr 1fr; }
-  .uses { grid-template-columns: 1fr 1fr; }
+  .hero .wrap, .spec-wrap, .signup .wrap, .kit-wrap, .catch { grid-template-columns: 1fr; }
+  .hero .wrap { padding-block: 28px 32px; gap: 28px; }
+  .hero-photo { order: -1; }
+  .hero-photo .photo { aspect-ratio: 4 / 3; object-position: 50% 45%; }
+  .kit-wrap figure { max-width: 420px; }
   .ruler .wrap { grid-template-columns: 1fr 1fr; }
   .ruler div:nth-child(3) { border-left: 0; padding-left: 0; }
   .ruler div:nth-child(n+3) { border-top: 1px solid var(--line); }
 }
-@media (max-width: 560px) {
-  .kit, .uses { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  .steps, .kit, .variants { grid-template-columns: 1fr; }
   section.block .wrap, .signup .wrap { padding-block: 56px; }
   form.card { padding: 20px; }
-  .brand span { font-size: 1.3rem; }
 }
 </style>
 </head>
@@ -197,8 +223,8 @@ footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-cont
     <div class="wrap">
       <div class="hero-copy">
         <p class="eyebrow">Zsebhorgászszett · Limitált első széria</p>
-        <h1>Egy teljes horgászbot, ami elfér a zsebedben.</h1>
-        <p class="lede">A Kapás összecsukva akkora, mint egy töltőtoll, kihúzva valódi bot orsóval. Ott van nálad a túrán, a kajakban, a nyaralásnál, amikor egy nagy bot csak útban lenne.</p>
+        <h1>1,7 méteres horgászbot egy 18 centis fadobozban.</h1>
+        <p class="lede">A Kapás bambuszmintás karbon spiccbot, ami 16 centire csukódik össze, és egy faragott keményfa tokban lakik. Nincs orsó, nincs gubanc: kihúzod, felakasztod a zsinórt, és már dobhatsz is.</p>
         <div class="price-row">
           <span class="price">39 990 Ft</span>
           <span class="price-old">44 990 Ft</span>
@@ -209,103 +235,132 @@ footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-cont
           <span class="cta-note">Most nem kell fizetni. 30 másodperc.</span>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg viewBox="0 0 520 400">
-          <!-- víz -->
-          <path d="M0 300 Q65 290 130 300 T260 300 T390 300 T520 300 V400 H0 Z" fill="color-mix(in srgb, var(--ink) 9%, transparent)"/>
-          <path d="M0 322 Q65 312 130 322 T260 322 T390 322 T520 322" fill="none" stroke="var(--line)" stroke-width="2"/>
-          <!-- bot -->
-          <g stroke-linecap="round">
-            <line x1="60" y1="330" x2="140" y2="250" stroke="var(--ink)" stroke-width="14"/>
-            <line x1="140" y1="250" x2="230" y2="160" stroke="var(--ink)" stroke-width="9"/>
-            <line x1="230" y1="160" x2="320" y2="85" stroke="var(--ink)" stroke-width="6"/>
-            <line x1="320" y1="85" x2="400" y2="30" stroke="var(--ink)" stroke-width="3.5"/>
-            <!-- szekció-gyűrűk -->
-            <circle cx="140" cy="250" r="8" fill="var(--brass)"/>
-            <circle cx="230" cy="160" r="6" fill="var(--brass)"/>
-            <circle cx="320" cy="85" r="4.5" fill="var(--brass)"/>
-          </g>
-          <!-- orsó -->
-          <g>
-            <circle cx="112" cy="300" r="28" fill="var(--surface)" stroke="var(--ink)" stroke-width="4"/>
-            <circle cx="112" cy="300" r="12" fill="var(--brass)"/>
-            <line x1="112" y1="300" x2="132" y2="322" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="134" cy="324" r="5" fill="var(--ink)"/>
-          </g>
-          <!-- zsinór -->
-          <path d="M400 30 Q440 140 455 288" fill="none" stroke="var(--muted)" stroke-width="1.4"/>
-          <!-- úszó -->
-          <g class="bob">
-            <ellipse cx="456" cy="296" rx="11" ry="17" fill="var(--accent)"/>
-            <rect x="445" y="294" width="22" height="5" fill="var(--surface)"/>
-            <line x1="456" y1="278" x2="456" y2="268" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
-          </g>
-          <!-- hal -->
-          <path d="M300 360 C312 344, 340 343, 352 360 C340 377, 312 376, 300 360 Z M349 360 L364 349 L360 360 L364 371 Z" fill="var(--ink)" opacity=".75"/>
-        </svg>
+      <div class="hero-photo">
+        <img class="photo" src="img/hero.jpg" width="900" height="1006" alt="Nyitott, sötét keményfa tok kézben, benne a zöld bambuszmintás összecsukott bot, háttérben egy folyó">
       </div>
     </div>
   </section>
 
-  <!-- A számok a gyártói adatlap alapján pontosítandók. -->
   <div class="ruler" aria-label="Fő méretek">
     <div class="wrap">
-      <div><b>21 cm</b><span>összecsukva</span></div>
-      <div><b>1,4 m</b><span>kihúzva</span></div>
-      <div><b>~180 g</b><span>bot + orsó</span></div>
-      <div><b>1 tok</b><span>minden belefér</span></div>
+      <div><b>16 cm</b><span>a bot összecsukva</span></div>
+      <div><b>1,7 m</b><span>a bot kihúzva</span></div>
+      <div><b>18 × 5 cm</b><span>a fadoboz</span></div>
+      <div><b>2 szín</b><span>zöld és natúr bambusz</span></div>
     </div>
   </div>
 
-  <section class="block" id="doboz">
+  <section class="block" id="hogyan">
     <div class="wrap">
       <div class="head">
-        <p class="eyebrow">A dobozban</p>
-        <h2>Kicsomagolod, kihúzod, bedobod.</h2>
-        <p class="lede">Nem kell külön orsót, zsinórt vagy horgot vadászni. A szett első dobásra készen érkezik.</p>
+        <p class="eyebrow">Hogyan működik</p>
+        <h2>Fél perc a dobozból a vízig.</h2>
+        <p class="lede">Ez egy spiccbot: a zsinór közvetlenül a bot végére kerül, ezért nem kell orsó. A régi bambuszbotok elve, mai karbonból.</p>
       </div>
-      <div class="kit">
-        <article><span class="qty">1 DB</span><h3>Teleszkópos bot</h3><p>Fém és karbon szekciók, amelyek egymásba csúsznak. Kihúzva stabil, összecsukva nem lötyög.</p></article>
-        <article><span class="qty">1 DB</span><h3>Fém mini orsó</h3><p>Előre feltekert zsinórral. Kis méret, de rendes fékkel és sima járással.</p></article>
-        <article><span class="qty">1 KÉSZLET</span><h3>Csalik és horgok</h3><p>Válogatás műcsalikból, horgokból és ólmokból, hogy azonnal kipróbálhasd.</p></article>
-        <article><span class="qty">1 DB</span><h3>Kemény tok</h3><p>Minden elfér benne. Hátizsákba, kesztyűtartóba, kabátzsebbe.</p></article>
-        <article><span class="qty">1 DB</span><h3>Úszó</h3><p>Jól látható piros-fehér úszó, hogy a kapást messziről is észrevedd.</p></article>
-        <article><span class="qty">1 LAP</span><h3>Gyors útmutató</h3><p>Magyarul: összeszerelés, első dobás, és hogyan tárold, hogy sokáig bírja.</p></article>
+      <ol class="steps">
+        <li><h3>Nyisd ki a dobozt</h3><p>A bot az egyik felében, a zsinór, a horgok és a kiegészítők a másikban, mindegyik a saját helyén.</p></li>
+        <li><h3>Húzd ki a botot</h3><p>A szekciók egymásból csúsznak ki. 16 centiből 1,7 méter lesz pár mozdulattal.</p></li>
+        <li><h3>Akaszd fel a zsinórt</h3><p>Hurok a spicc végére, horog és csali a másik végére, úszó középre. Már dobhatod is.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="doboz">
+    <div class="wrap kit-wrap">
+      <figure>
+        <img class="photo" src="img/faragas.jpg" width="798" height="1043" loading="lazy" alt="Négy keményfa tok egymás mellett, kettő nyitva, kettőnek a fedelén gravírozott bambuszminta">
+        <figcaption>Sötét és világos fa tokok, a fedelükön bambuszgravírozással.</figcaption>
+      </figure>
+      <div style="display:grid;gap:28px;min-width:0">
+        <div class="head">
+          <p class="eyebrow">A dobozban</p>
+          <h2>Minden benne van, ami az első fogáshoz kell.</h2>
+        </div>
+        <ul class="kit">
+          <li><span class="qty">1 db</span><span><b>Karbon spiccbot</b><span class="d">Bambuszmintás, közepes akciójú, teleszkópos.</span></span></li>
+          <li><span class="qty">1 db</span><span><b>Faragott fadoboz</b><span class="d">Két félből záródó keményfa tok.</span></span></li>
+          <li><span class="qty">2 tekercs</span><span><b>Zsinór úszóval</b><span class="d">Átlátszó dobozban, előkészítve.</span></span></li>
+          <li><span class="qty">1 csomag</span><span><b>Előkötött horgok</b><span class="d">Kötni sem kell, csak felakasztani.</span></span></li>
+          <li><span class="qty">2 db</span><span><b>Fa zsinórtekerő</b><span class="d">Ezekre tekered fel a zsinórt a nap végén.</span></span></li>
+          <li><span class="qty">1 db</span><span><b>Fa bottartó</b><span class="d">Letámasztod, és szabad a kezed.</span></span></li>
+          <li><span class="qty">1 db</span><span><b>Összecsukható olló</b><span class="d">Zsinórvágáshoz.</span></span></li>
+          <li><span class="qty">1 db</span><span><b>Tubusos csali</b><span class="d">Hogy rögtön legyen mivel kezdeni.</span></span></li>
+          <li><span class="qty">1 db</span><span><b>Bársonyzsák</b><span class="d">Ebben utazik a doboz.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="kivitelek">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Két kivitel</p>
+        <h2>Zöld vagy natúr bambusz?</h2>
+        <p class="lede">Ugyanaz a bot és ugyanaz a felszerelés, két hangulatban. Az előjegyzésnél jelezd, melyik tetszik jobban.</p>
+      </div>
+      <div class="variants">
+        <article class="variant">
+          <img class="photo" src="img/zold.jpg" width="900" height="832" loading="lazy" alt="A zöld bambuszmintás bot sötét vörösesbarna tokban, mellette a tartozékok">
+          <h3><span class="swatch" style="background:#7F9A2E"></span>Zöld bambusz</h3>
+          <p>Friss zöld bot sötét, vörösesbarna fatokban. A klasszikus.</p>
+        </article>
+        <article class="variant">
+          <img class="photo" src="img/natur.jpg" width="900" height="832" loading="lazy" alt="A natúr bambuszmintás bot világosbarna tokban, mellette a tartozékok">
+          <h3><span class="swatch" style="background:#C9A36A"></span>Natúr bambusz</h3>
+          <p>Szalmaszínű bot meleg, világosbarna fatokban. Visszafogottabb, elegánsabb.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="block" id="mikor">
-    <div class="wrap">
-      <div class="head">
-        <p class="eyebrow">Mikor veszed elő</p>
-        <h2>Ott van nálad, amikor a víz is ott van.</h2>
-      </div>
-      <div class="uses">
-        <article><h3>Túrán</h3><p>Patak mellett pihenő? Két perc, és már dobsz is. A bot a hátizsák oldalzsebében utazik.</p></article>
-        <article><h3>Kajakban, SUP-on</h3><p>Nem lóg ki, nem akad bele semmibe, és nem bánod, ha a fedélzeten marad.</p></article>
-        <article><h3>Nyaraláson</h3><p>Befér a kézipoggyászba. A Balatonra és a horvát mólóra is jön veled.</p></article>
-        <article><h3>Ajándéknak</h3><p>Annak, akinek már mindene megvan. A tok kinyitása önmagában élmény.</p></article>
+    <div class="wrap catch">
+      <figure>
+        <img class="photo" src="img/fogas.jpg" width="900" height="1007" loading="lazy" alt="Kifogott hal a horgon, mellette a fűben a két kihúzott bot és a fadoboz">
+        <figcaption>Kicsi a bot, de valódi halat fog.</figcaption>
+      </figure>
+      <div style="display:grid;gap:28px;min-width:0">
+        <div class="head">
+          <p class="eyebrow">Mikor veszed elő</p>
+          <h2>Ott van nálad, amikor a víz is ott van.</h2>
+        </div>
+        <div class="uses">
+          <article><h3>Túrán és biciklivel</h3><p>A doboz akkora, mint egy tolltartó. Elfér a kabátzsebben és a hátizsák oldalzsebében.</p></article>
+          <article><h3>Nyaraláson</h3><p>Befér a kézipoggyászba. Jön veled a Balatonra, a Tiszára és a horvát mólóra.</p></article>
+          <article><h3>Ajándéknak</h3><p>Annak, akinek már mindene megvan. A fadoboz kinyitása önmagában élmény, horgászni pedig az is megtanul vele, aki még sosem próbálta.</p></article>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="block" id="adatok">
     <div class="wrap spec-wrap">
-      <div class="head">
-        <p class="eyebrow">Adatok</p>
-        <h2>Kicsi, de nem játék.</h2>
-        <p class="lede">Kisebb tavi és folyóvízi halakra tervezve: keszeg, sügér, kisebb ponty és csuka. Nem a harcsázós napokra, hanem a spontán félórákra.</p>
+      <div style="display:grid;gap:28px;min-width:0">
+        <div class="head">
+          <p class="eyebrow">Adatok</p>
+          <h2>Kicsi, de nem játék.</h2>
+          <p class="lede">Kezdőknek és alkalmi horgászoknak tervezve, tavi, folyóvízi és patakos horgászatra. Kisebb halakra ideális: keszeg, kárász, sügér, ponty-ivadék.</p>
+        </div>
+        <svg class="dims" viewBox="0 0 440 150" role="img" aria-label="Méretek: a doboz 18 cm, a bot összecsukva 16 cm, kihúzva 170 cm">
+          <rect x="20" y="20" width="180" height="40" rx="10" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <rect x="30" y="33" width="160" height="14" rx="7" fill="var(--bamboo)"/>
+          <line x1="20" y1="76" x2="200" y2="76" stroke="var(--muted)" stroke-width="1"/>
+          <line x1="20" y1="71" x2="20" y2="81" stroke="var(--muted)"/><line x1="200" y1="71" x2="200" y2="81" stroke="var(--muted)"/>
+          <text x="110" y="95" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--muted)">18 cm doboz · 16 cm bot</text>
+          <line x1="20" y1="125" x2="420" y2="118" stroke="var(--bamboo)" stroke-width="4" stroke-linecap="round"/>
+          <text x="420" y="140" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--muted)">kihúzva 170 cm</text>
+          <text x="236" y="45" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--accent)">× 10,6</text>
+        </svg>
       </div>
-      <div style="overflow-x:auto">
+      <div style="overflow-x:auto;min-width:0">
         <table class="spec">
-          <tr><th>Hossz összecsukva</th><td>21 cm</td></tr>
-          <tr><th>Hossz kihúzva</th><td>1,4 m</td></tr>
-          <tr><th>Szekciók száma</th><td>7</td></tr>
-          <tr><th>Orsó</th><td>fém, előre feltekert zsinórral</td></tr>
-          <tr><th>Ajánlott dobósúly</th><td>3–15 g</td></tr>
-          <tr><th>Tömeg (bot + orsó)</th><td>~180 g</td></tr>
-          <tr><th>Garancia</th><td>12 hónap</td></tr>
+          <tr><th>Anyag</th><td>karbon kompozit, bambuszmintás</td></tr>
+          <tr><th>Típus</th><td>teleszkópos spiccbot (orsó nélküli)</td></tr>
+          <tr><th>Hossz összecsukva</th><td>16 cm</td></tr>
+          <tr><th>Hossz kihúzva</th><td>170 cm</td></tr>
+          <tr><th>Akció</th><td>közepes</td></tr>
+          <tr><th>Doboz</th><td>keményfa, 18 × 5 cm</td></tr>
+          <tr><th>Színek</th><td>zöld bambusz · natúr bambusz</td></tr>
         </table>
       </div>
     </div>
@@ -316,7 +371,7 @@ footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-cont
       <div class="head">
         <p class="eyebrow">Előjegyzés</p>
         <h2>Az első széria 50 darab.</h2>
-        <p class="lede">Iratkozz fel, és lefoglaljuk neked az alapító árat. Fizetni csak akkor kell, ha megérkezett a szállítmány és megerősíted a rendelést.</p>
+        <p class="lede">Iratkozz fel, és lefoglaljuk neked az alapító árat. Fizetni csak akkor kell, ha megérkezett a szállítmány, és megerősíted a rendelést.</p>
         <ul class="perks">
           <li><span>Alapító ár: <b>39 990 Ft</b> a későbbi 44 990 Ft helyett</span></li>
           <li><span>Elsőként kapod meg, még a nyilvános indulás előtt</span></li>
@@ -334,6 +389,15 @@ footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-cont
           <label for="name">Keresztneved <span class="hint">(nem kötelező)</span></label>
           <input id="name" name="name" type="text" autocomplete="given-name" maxlength="100">
         </div>
+
+        <fieldset>
+          <legend>Melyik kivitel tetszik?</legend>
+          <div class="chips">
+            <label><input type="radio" name="variant" id="v-zold" value="zold"><span><span class="swatch" style="background:#7F9A2E"></span>Zöld bambusz</span></label>
+            <label><input type="radio" name="variant" id="v-natur" value="natur"><span><span class="swatch" style="background:#C9A36A"></span>Natúr bambusz</span></label>
+            <label><input type="radio" name="variant" id="v-mindegy" value="mindegy"><span>Mindegy</span></label>
+          </div>
+        </fieldset>
 
         <fieldset>
           <legend>Mennyire érdekel?</legend>
@@ -384,9 +448,11 @@ footer .wrap { padding-block: 36px; display: flex; flex-wrap: wrap; justify-cont
       </div>
       <div class="faq">
         <details><summary>Most kell fizetnem?</summary><p>Nem. Az előjegyzés ingyenes és nem kötelez semmire. Amikor megérkezik az első széria, e-mailt küldünk, és csak akkor rendelsz, ha még mindig kéred.</p></details>
-        <details><summary>Mikor szállítotok?</summary><p>Az első széria akkor indul, amikor összegyűlt elég előjegyzés. Az előjegyzők elsőként kapnak pontos dátumot.</p></details>
-        <details><summary>Tényleg lehet vele halat fogni?</summary><p>Igen. Kisebb halakra és könnyű pergetésre készült. Nagy pontyra vagy harcsára egy rendes bot kell, a Kapás a spontán horgászatra való.</p></details>
+        <details><summary>Miért nincs rajta orsó?</summary><p>Mert spiccbot: a zsinór a bot végére van kötve, ahogy a régi bambuszbotoknál. Így nincs mit összegubancolni, és ezért fér el az egész egy 18 centis dobozban.</p></details>
+        <details><summary>Tényleg lehet vele halat fogni?</summary><p>Igen. Kisebb halakra készült, part közeli horgászatra. Nagy pontyra vagy harcsára egy rendes bot kell, a Kapás a spontán horgászatra való.</p></details>
+        <details><summary>Kezdőként is boldogulok vele?</summary><p>Igen, kifejezetten kezdőknek jó. Nincs orsó, amit meg kellene tanulni kezelni, a horgok előre kötöttek, és magyar nyelvű útmutatót is adunk mellé.</p></details>
         <details><summary>Kell hozzá horgászengedély?</summary><p>Igen. Magyarországon minden horgászbothoz állami horgászjegy és az adott vízre szóló területi jegy kell, a bot méretétől függetlenül.</p></details>
+        <details><summary>Mikor szállítotok?</summary><p>Az első széria akkor indul, amikor összegyűlt elég előjegyzés. Az előjegyzők elsőként kapnak pontos dátumot.</p></details>
         <details><summary>Mi van, ha nem tetszik?</summary><p>Átvételtől számítva 14 napig indoklás nélkül visszaküldheted, és visszakapod az árát.</p></details>
       </div>
     </div>
@@ -445,6 +511,7 @@ form.addEventListener("submit", async (e) => {
   const row = {
     email: email.toLowerCase(),
     name: String(data.get("name") || "").trim() || null,
+    variant: data.get("variant") || null,
     intent: data.get("intent"),
     price_band: data.get("price") || null,
     quantity: Number(data.get("qty") || 1),
