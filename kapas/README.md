@@ -60,8 +60,14 @@ A fedezetből még le kell vonni: hirdetés (egy eladás ára Meta-n könnyen 3�
 futár, fizetési díj. Ezért 39 990 Ft alá nem érdemes menni. Az űrlap árérzet-kérdése megmutatja,
 elbírja-e a piac a 44 990 Ft-ot.
 
+## Hirdetési mérés
+
+Az `index.html` elején a `META_PIXEL_ID` változóba írd be a Meta pixel azonosítóját. Ekkor az oldal
+`PageView`, a sikeres feliratkozás pedig `Lead` eseményt küld. Ezt válaszd konverziónak a kampányban.
+
 ## Teendő élesítés előtt
 
 - Kérdezd meg a gyártót: mi a zöld tubus (csali vagy ragasztó?), mindkét színhez jár-e gravírozott fedél, és van-e mágneses zár.
 - Az oldal magyar nyelvű útmutatót ígér, ezt el kell készíteni a csomagba.
 - A fotók a gyártó hirdetéséből vannak. Kérdezd meg, használhatod-e őket, vagy fotózz sajátot a mintadarabról.
+- Domain után: canonical link, teljes URL-es og:image, sitemap.xml, robots.txt, Google Search Console.
